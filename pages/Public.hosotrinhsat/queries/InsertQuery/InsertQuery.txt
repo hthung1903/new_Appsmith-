@@ -1,0 +1,12 @@
+INSERT INTO public."hosotrinhsat" (
+	"tenhoso",
+	"ngaybanhanh",
+	"ngaysuadoi",
+	"muctieuid",
+	"duongdanfile")
+VALUES (
+	'{{insert_form.formData.tenhoso}}',
+	'{{insert_form.formData.ngaybanhanh}}',
+	'{{insert_form.formData.ngaysuadoi}}',
+	'{{insert_form.formData.muctieuid}}',
+	'{{insert_form.formData.duongdanfile}}');

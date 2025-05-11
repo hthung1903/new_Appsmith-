@@ -1,0 +1,8 @@
+SELECT 
+    vido AS lat, 
+    kinhdo AS lng, 
+    tenmuctieu AS name
+FROM public."muctieu"
+WHERE 
+    {{ MultiTreeSelect1.selectedOptionValues.length > 0 ? '"id" = ANY(ARRAY[' + MultiTreeSelect1.selectedOptionValues.join(',') + '])' : 'TRUE' }}
+ORDER BY "id" ASC

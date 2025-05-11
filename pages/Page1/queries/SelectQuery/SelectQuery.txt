@@ -1,0 +1,7 @@
+SELECT 
+  muctieu.*
+FROM public.kehoach_muctieu
+JOIN public.muctieu 
+  ON kehoach_muctieu.muctieuid = muctieu.id
+WHERE kehoach_muctieu.kehoachid = {{ appsmith.URL.queryParams.planId }}
+ORDER BY muctieu.id ASC

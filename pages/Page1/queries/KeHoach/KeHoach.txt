@@ -1,0 +1,1 @@
+SELECT * FROM public.kehoach WHERE id = {{appsmith.URL.queryParams.planId}};

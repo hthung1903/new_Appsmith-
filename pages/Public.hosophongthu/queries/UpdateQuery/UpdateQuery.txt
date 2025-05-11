@@ -1,0 +1,10 @@
+UPDATE public."hosophongthu" SET
+		"tenhoso" = '{{update_form.fieldState.tenhoso.isVisible ? update_form.formData.tenhoso : update_form.sourceData.tenhoso}}',
+		"ngaybanhanh" = '{{update_form.fieldState.ngaybanhanh.isVisible ? update_form.formData.ngaybanhanh : update_form.sourceData.ngaybanhanh}}',
+    "ngaysuadoi" = '{{update_form.fieldState.ngaysuadoi.isVisible ? update_form.formData.ngaysuadoi : update_form.sourceData.ngaysuadoi}}',
+		"muctieuid" = '{{update_form.fieldState.muctieuid.isVisible ? update_form.formData.muctieuid : update_form.sourceData.muctieuid}}',
+		"sodotuyencap" = '{{update_form.fieldState.sodotuyencap.isVisible ? update_form.formData.sodotuyencap : update_form.sourceData.sodotuyencap}}',
+		"sodologic" = '{{update_form.fieldState.sodologic.isVisible ? update_form.formData.sodologic : update_form.sourceData.sodologic}}',
+		"soturack" = '{{update_form.fieldState.soturack.isVisible ? update_form.formData.soturack : update_form.sourceData.soturack}}',
+		"duongdanfile" = '{{update_form.fieldState.duongdanfile.isVisible ? update_form.formData.duongdanfile : update_form.sourceData.duongdanfile}}'
+WHERE "id" = {{data_table.selectedRow.id}};

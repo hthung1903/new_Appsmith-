@@ -1,0 +1,11 @@
+SELECT
+    LoaiMucTieu AS x,
+    COUNT(*) AS y
+FROM
+    MucTieu
+WHERE
+    LoaiMucTieu IS NOT NULL -- Loại bỏ các mục tiêu không có thông tin loại mục tiêu
+GROUP BY
+    LoaiMucTieu
+ORDER BY
+    y DESC;

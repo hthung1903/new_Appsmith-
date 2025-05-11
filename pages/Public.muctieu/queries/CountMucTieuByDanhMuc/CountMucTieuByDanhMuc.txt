@@ -1,0 +1,12 @@
+-- Thống kê số lượng mục tiêu theo danh mục
+SELECT
+    DanhMuc AS x,
+    COUNT(*) AS y
+FROM
+    MucTieu
+WHERE
+    DanhMuc IS NOT NULL -- Loại bỏ các mục tiêu không có thông tin danh mục
+GROUP BY
+    DanhMuc
+ORDER BY
+    y DESC;

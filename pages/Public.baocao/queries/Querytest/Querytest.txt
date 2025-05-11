@@ -1,0 +1,11 @@
+SELECT 
+    QUARTER(ngaybanhanh) AS x,
+    COUNT(*) AS y
+FROM 
+    baocao
+WHERE 
+    ngaybanhanh BETWEEN '{{ DatePickerstart.formattedDate }}' AND '{{ DatePickerend.formattedDate }}'
+GROUP BY 
+    x
+ORDER BY 
+    x;

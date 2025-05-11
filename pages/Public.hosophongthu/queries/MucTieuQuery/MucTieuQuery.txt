@@ -1,0 +1,11 @@
+SELECT 
+  id, 
+  tenmuctieu, 
+  muctieuid, 
+  quocgia 
+FROM public."muctieu"
+WHERE "quocgia" = 'Việt Nam'
+ORDER BY 
+  COALESCE("muctieuid", id), 
+  CASE WHEN "muctieuid" IS NULL THEN 0 ELSE 1 END, 
+  "id" ASC;

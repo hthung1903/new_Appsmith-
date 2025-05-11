@@ -1,0 +1,20 @@
+INSERT INTO public."muctieu" (
+	"quocgia",
+	"tenmuctieu",
+	"kinhdo",
+	"vido",
+	"muctieuid",
+	"danhmuc",
+	"loaimuctieu",
+	"mota",
+	"kehoachid")
+VALUES (
+	'{{insert_form.formData.quocgia}}',
+	'{{insert_form.formData.tenmuctieu}}',
+	'{{insert_form.formData.kinhdo}}',
+	'{{insert_form.formData.vido}}',
+	'{{insert_form.formData.muctieuid}}',
+	'{{insert_form.formData.danhmuc}}',
+	'{{insert_form.formData.loaimuctieu}}',
+	'{{insert_form.formData.mota}}',
+	'{{insert_form.formData.kehoachid}}');

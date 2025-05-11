@@ -1,0 +1,1 @@
+SELECT ID, TenMucTieu, MucTieuID FROM public."muctieu";

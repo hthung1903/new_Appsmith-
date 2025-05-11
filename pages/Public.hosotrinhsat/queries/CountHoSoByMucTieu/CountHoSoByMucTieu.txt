@@ -1,0 +1,7 @@
+SELECT  
+  mt."tenmuctieu" AS x,
+  COUNT(hs."muctieuid") AS y
+FROM public."hosotrinhsat" hs
+LEFT JOIN public."muctieu" mt ON hs."muctieuid" = mt."id"
+GROUP BY hs."muctieuid", mt."tenmuctieu"
+ORDER BY y DESC

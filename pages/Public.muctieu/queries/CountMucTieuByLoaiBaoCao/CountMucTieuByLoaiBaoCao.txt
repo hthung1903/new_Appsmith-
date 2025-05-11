@@ -1,0 +1,41 @@
+SELECT
+    b.LoaiBaoCao AS x,
+    COUNT(m.ID) AS y
+FROM
+    MucTieu m
+JOIN
+    BaoCaoTrinhSat bts ON m.ID = bts.MucTieuID
+JOIN
+    BaoCao b ON bts.BaoCaoID = b.ID
+GROUP BY
+    b.LoaiBaoCao
+
+UNION ALL
+
+SELECT
+    b.LoaiBaoCao AS x,
+    COUNT(m.ID) AS y
+FROM
+    MucTieu m
+JOIN
+    BaoCaoDoQuet bdq ON m.ID = bdq.MucTieuID
+JOIN
+    BaoCao b ON bdq.BaoCaoID = b.ID
+GROUP BY
+    b.LoaiBaoCao
+
+UNION ALL
+
+SELECT
+    b.LoaiBaoCao AS x,
+    COUNT(m.ID) AS y
+FROM
+    MucTieu m
+JOIN
+    BaoCaoLoLot bll ON m.ID = bll.MucTieuID
+JOIN
+    BaoCao b ON bll.BaoCaoID = b.ID
+GROUP BY
+    b.LoaiBaoCao
+ORDER BY
+    y DESC;

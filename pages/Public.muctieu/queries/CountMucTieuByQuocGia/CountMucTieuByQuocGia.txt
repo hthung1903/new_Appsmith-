@@ -1,0 +1,11 @@
+SELECT
+    QuocGia AS x,
+    COUNT(*) AS y
+FROM
+    MucTieu
+WHERE
+    QuocGia IS NOT NULL -- Loại bỏ các mục tiêu không có thông tin quốc gia
+GROUP BY
+    QuocGia
+ORDER BY
+    y DESC;

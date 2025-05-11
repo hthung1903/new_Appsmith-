@@ -1,0 +1,1 @@
+SELECT public.kehoach.loaikehoach as x, Count(*) as y FROM public.kehoach GROUP BY public.kehoach.loaikehoach;

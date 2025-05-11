@@ -1,0 +1,1 @@
+SELECT tenmuctieu as label, id as value FROM public.muctieu;

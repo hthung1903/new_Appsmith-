@@ -1,0 +1,38 @@
+{
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "none",
+  "buttonColor": "#DD4B34",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 46,
+  "onClick": "{{\n  ApiDelete.run(\n    () => { \n      DeleteQuery.run( \n        () => { \n          SelectQuery.run(\n            () => { \n              closeModal('Delete_Modal'); \n              showAlert('File và item đã được xóa thành công!', 'success'); \n            },\n            () => { \n              showAlert('File và item đã xóa, nhưng không thể làm mới danh sách.', 'warning'); \n            }\n          );\n        },\n        (dbError) => { \n          console.error('Lỗi khi xóa item trong DB:', dbError);\n          showAlert('File đã xóa, nhưng lỗi khi xóa item trong cơ sở dữ liệu: ' + dbError.message, 'error'); // Thông báo lỗi xóa DB\n        }\n      );\n    },\n    (apiError) => { // Hàm này chạy khi deleteFileApi gặp lỗi\n      console.error('Lỗi khi xóa file API:', apiError);\n      showAlert('Lỗi khi xóa file: ' + apiError.message, 'error'); // Thông báo lỗi xóa file\n    }\n  );\n}}",
+  "parentId": "zi8fjakv8o",
+  "recaptchaType": "V3",
+  "rightColumn": 64,
+  "text": "Confirm",
+  "topRow": 17,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "qq02lh7ust",
+  "widgetName": "Delete_Button"
+}

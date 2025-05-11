@@ -1,0 +1,10 @@
+UPDATE public."kehoach" SET
+		"sokehoach" = '{{update_form.fieldState.sokehoach.isVisible ? update_form.formData.sokehoach : update_form.sourceData.sokehoach}}',
+		"loaikehoach" = '{{update_form.fieldState.loaikehoach.isVisible ? update_form.formData.loaikehoach : update_form.sourceData.loaikehoach}}',
+    "tenkehoach" = '{{update_form.fieldState.tenkehoach.isVisible ? update_form.formData.tenkehoach : update_form.sourceData.tenkehoach}}',
+		"capbanhanh" = '{{update_form.fieldState.capbanhanh.isVisible ? update_form.formData.capbanhanh : update_form.sourceData.capbanhanh}}',
+		"ngaybanhanh" = '{{update_form.fieldState.ngaybanhanh.isVisible ? update_form.formData.ngaybanhanh : update_form.sourceData.ngaybanhanh}}',
+		"duongdanfile" = '{{update_form.fieldState.duongdanfile.isVisible ? update_form.formData.duongdanfile : update_form.sourceData.duongdanfile}}',
+		"kehoachid" = '{{update_form.fieldState.kehoachid.isVisible ? update_form.formData.kehoachid : update_form.sourceData.kehoachid}}',
+		"mota" = '{{update_form.fieldState.mota.isVisible ? update_form.formData.mota : update_form.sourceData.mota}}'
+WHERE "id" = {{data_table.selectedRow.id}};

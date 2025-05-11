@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6811d55e4101ca4f4d2f6d2e_f831a220-5bc9-4d0a-b745-44d863a73c7c",
+  "id": "Public.baocao_JSreset",
+  "unpublishedCollection": {
+    "name": "JSreset",
+    "pageId": "Public.baocao",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

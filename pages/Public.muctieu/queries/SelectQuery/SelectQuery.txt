@@ -1,0 +1,3 @@
+SELECT * FROM public."muctieu"
+WHERE "quocgia" ilike '%{{data_table.searchText || ""}}%'
+ORDER BY "{{data_table.sortOrder.column || 'id'}}" {{data_table.sortOrder.order || 'ASC'}}

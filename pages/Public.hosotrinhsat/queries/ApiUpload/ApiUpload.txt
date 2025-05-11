@@ -1,0 +1,5 @@
+{
+  "file": "{{ FilePickerUpload.files[0] }}", // Accessing the file data
+  "key1": "value1",
+  "key2": "value2"
+}

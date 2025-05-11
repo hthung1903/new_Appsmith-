@@ -1,0 +1,2 @@
+SELECT COUNT(DISTINCT hs."muctieuid") AS so_muctieu
+FROM public."hosotrinhsat" hs;

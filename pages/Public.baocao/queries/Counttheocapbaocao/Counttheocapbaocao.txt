@@ -1,0 +1,11 @@
+SELECT 
+    capbaocao AS x,
+    COUNT(*) AS y
+FROM 
+    baocao
+WHERE 
+    ngaybanhanh BETWEEN '{{ DatePickerstart.selectedDate }}' AND '{{ DatePickerend.selectedDate }}'
+GROUP BY 
+    x
+ORDER BY 
+    x;

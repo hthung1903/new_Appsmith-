@@ -1,0 +1,12 @@
+SELECT
+  EXTRACT(YEAR FROM ngaybanhanh) AS nam,
+  SUM(CASE WHEN EXTRACT(MONTH FROM ngaybanhanh) BETWEEN 1 AND 6 THEN 1 ELSE 0 END) AS "6_thang_dau_nam",
+  SUM(CASE WHEN EXTRACT(MONTH FROM ngaybanhanh) BETWEEN 7 AND 12 THEN 1 ELSE 0 END) AS "6_thang_cuoi_nam"
+FROM
+  baocao
+WHERE
+  ngaybanhanh IS NOT NULL
+GROUP BY
+  nam
+ORDER BY
+  nam;

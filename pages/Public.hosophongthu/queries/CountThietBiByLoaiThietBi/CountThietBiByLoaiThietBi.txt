@@ -1,0 +1,11 @@
+SELECT
+    LoaiThietBi AS x,
+    COUNT(*) AS y
+FROM
+    E_ThietBiMang
+WHERE
+    LoaiThietBi IS NOT NULL -- Loại bỏ các thiết bị không có thông tin loại
+GROUP BY
+    LoaiThietBi
+ORDER BY
+    y DESC;

@@ -1,0 +1,2 @@
+DELETE FROM public."hosophongthu"
+  WHERE "id" = {{data_table.triggeredRow.id}};
