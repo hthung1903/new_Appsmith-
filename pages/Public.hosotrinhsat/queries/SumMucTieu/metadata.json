@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(DISTINCT hs.\"muctieuid\") AS so_muctieu\nFROM public.\"hosotrinhsat\" hs;",
+      "body": "SELECT COUNT(DISTINCT hsm.\"muctieuid\") AS so_muctieu\nFROM public.\"hosotrinhsat_muctieu\" hsm;\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

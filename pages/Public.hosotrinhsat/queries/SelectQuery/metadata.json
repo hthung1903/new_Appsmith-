@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  hs.*, \n  mt.\"tenmuctieu\" AS tenmuctieu \nFROM public.\"hosotrinhsat\" hs\nLEFT JOIN public.\"muctieu\" mt ON hs.\"muctieuid\" = mt.\"id\"\nWHERE hs.\"tenhoso\" ILIKE '%{{data_table.searchText || \"\"}}%'\nORDER BY \"{{data_table.sortOrder.column || 'id'}}\" {{data_table.sortOrder.order || 'ASC'}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
+      "body": "SELECT \n  hs.*\nFROM public.\"hosotrinhsat\" hs\nWHERE hs.\"tenhoso\" ILIKE '%{{data_table.searchText || \"\"}}%'\nORDER BY \"{{data_table.sortOrder.column || 'id'}}\" {{data_table.sortOrder.order || 'ASC'}}\n\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

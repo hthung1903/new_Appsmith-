@@ -26,8 +26,6 @@
     "tenhoso",
     "ngaybanhanh",
     "ngaysuadoi",
-    "muctieuid",
-    "tenmuctieu",
     "duongdanfile",
     "customColumn1"
   ],
@@ -36,7 +34,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1746326573363,
+  "columnUpdatedAt": 1747010897268,
   "columnWidthMap": {
     "id": 60,
     "ngaysuadoi": 120
@@ -94,13 +92,7 @@
       "key": "primaryColumns.ngaysuadoi.computedValue"
     },
     {
-      "key": "primaryColumns.muctieuid.computedValue"
-    },
-    {
       "key": "primaryColumns.duongdanfile.computedValue"
-    },
-    {
-      "key": "primaryColumns.tenmuctieu.computedValue"
     },
     {
       "key": "accentColor"
@@ -250,40 +242,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "muctieuid": {
-      "alias": "muctieuid",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"muctieuid\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "muctieuid",
-      "index": 4,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": false,
-      "label": "muctieuid",
-      "notation": "standard",
-      "originalId": "muctieuid",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "ngaybanhanh": {
       "alias": "ngaybanhanh",
       "allowCellWrapping": false,
@@ -378,40 +336,6 @@
       "label": "tenhoso",
       "notation": "standard",
       "originalId": "tenhoso",
-      "sticky": "",
-      "textColor": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "tenmuctieu": {
-      "alias": "tenmuctieu",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "cellBackground": "",
-      "columnType": "text",
-      "computedValue": "{{data_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"tenmuctieu\"]))}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "fontStyle": "",
-      "horizontalAlignment": "LEFT",
-      "id": "tenmuctieu",
-      "index": 6,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "tenmuctieu",
-      "notation": "standard",
-      "originalId": "tenmuctieu",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

@@ -1,0 +1,45 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 39,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "eukbgj7ble",
+  "leftColumn": 30,
+  "mobileBottomRow": 30,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 8,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "originalBottomRow": 127,
+  "originalTopRow": 82,
+  "parentColumnSpace": 12.02734375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "source": "http://localhost:8080",
+  "srcDoc": "<!DOCTYPE html>\n<html lang=\"vi\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Bản đồ Offline với Leaflet</title>\n    <link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css\" />\n    <script src=\"https://unpkg.com/leaflet@1.9.4/dist/leaflet.js\"></script>\n    <style>\n        body { margin: 0; padding: 0; }\n        #map { width: 100%; height: 100vh; }\n    </style>\n</head>\n<body>\n    <div id=\"map\"></div>\n    <script>\n        var map = L.map('map').setView([0, 0], 2);\n\n        L.tileLayer('http://localhost:8080/tile/{z}/{x}/{y}.png', {\n            attribution: 'Bản đồ Offline',\n            maxZoom: 18,\n            tileSize: 256,\n            zoomOffset: 0\n        }).addTo(map);\n\n        // Lấy danh sách targets\n        var targets = JSON.parse(`{{ JSON.stringify(\n          ChonMucTieu.data.map(item => ({\n            lat: item.vido,\n            lng: item.kinhdo,\n          \tname:item.tenmuctieu\n          }))\n        ) }}`);\n\n        targets.forEach(function(target) {\n            L.marker([target.lat, target.lng])\n                .addTo(map)\n                .bindPopup(target.name);\n        });\n\n        if (targets.length > 0) {\n            var group = new L.featureGroup(targets.map(function(target) {\n                return L.marker([target.lat, target.lng]).bindPopup(target.name);\n            }));\n            map.fitBounds(group.getBounds().pad(0.1));\n        }\n    </script>\n</body>\n</html>\n",
+  "topRow": 4,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "3vd79ugin0",
+  "widgetName": "Iframe1"
+}

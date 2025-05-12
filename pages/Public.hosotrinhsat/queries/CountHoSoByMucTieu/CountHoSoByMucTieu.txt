@@ -1,7 +1,7 @@
-SELECT  
+SELECT
   mt."tenmuctieu" AS x,
-  COUNT(hs."muctieuid") AS y
-FROM public."hosotrinhsat" hs
-LEFT JOIN public."muctieu" mt ON hs."muctieuid" = mt."id"
-GROUP BY hs."muctieuid", mt."tenmuctieu"
-ORDER BY y DESC
+  COUNT(hsm."hosotrinhsatid") AS y
+FROM public."hosotrinhsat_muctieu" hsm
+LEFT JOIN public."muctieu" mt ON hsm."muctieuid" = mt."id"
+GROUP BY mt."id", mt."tenmuctieu"
+ORDER BY y DESC;

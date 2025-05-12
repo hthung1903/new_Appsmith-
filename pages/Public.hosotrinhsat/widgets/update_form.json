@@ -119,15 +119,6 @@
       "key": "schema.__root_schema__.children.ngaysuadoi.borderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.muctieuid.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.muctieuid.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.muctieuid.borderRadius"
-    },
-    {
       "key": "schema.__root_schema__.children.duongdanfile.defaultValue"
     },
     {
@@ -135,15 +126,6 @@
     },
     {
       "key": "schema.__root_schema__.children.duongdanfile.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.tenmuctieu.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.tenmuctieu.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.tenmuctieu.borderRadius"
     },
     {
       "key": "title"
@@ -165,9 +147,6 @@
     },
     {
       "key": "schema.__root_schema__.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.tenmuctieu.options"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -248,28 +227,6 @@
           "originalIdentifier": "duongdanfile",
           "position": 5
         },
-        "muctieuid": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "accessor": "muctieuid",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.muctieuid))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
-          "identifier": "muctieuid",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Muctieuid",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "muctieuid",
-          "position": 4,
-          "sourceData": 3
-        },
         "ngaybanhanh": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "ngaybanhanh",
@@ -339,29 +296,6 @@
           "originalIdentifier": "tenhoso",
           "position": 0,
           "sourceData": "Hồ sơ mạng quốc phòng VN"
-        },
-        "tenmuctieu": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "accessor": "tenmuctieu/",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.muctieuid))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Select",
-          "identifier": "tenmuctieu",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isFilterable": true,
-          "isRequired": false,
-          "isVisible": true,
-          "label": "Tenmuctieu",
-          "labelTextSize": "0.875rem",
-          "options": "{{ \n  (MucTieuQuery.data || []).map(item => ({\n    label: item.tenmuctieu,\n    value: item.id\n  }))\n}}",
-          "originalIdentifier": "tenmuctieu",
-          "position": 3,
-          "serverSideFiltering": false,
-          "sourceData": ""
         }
       },
       "dataType": "object",

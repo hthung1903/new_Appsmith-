@@ -215,7 +215,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 90,
+  "originalBottomRow": 83,
   "originalTopRow": 5,
   "parentColumnSpace": 16.3125,
   "parentId": "9djplvquln",

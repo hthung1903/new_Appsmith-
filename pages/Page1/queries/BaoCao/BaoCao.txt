@@ -1,4 +1,0 @@
-SELECT * 
-FROM public.baocao
-WHERE kehoachid = {{ appsmith.URL.queryParams.planId }}
-LIMIT 1;

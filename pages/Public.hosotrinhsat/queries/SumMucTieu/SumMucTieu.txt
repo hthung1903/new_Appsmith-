@@ -1,2 +1,2 @@
-SELECT COUNT(DISTINCT hs."muctieuid") AS so_muctieu
-FROM public."hosotrinhsat" hs;
+SELECT COUNT(DISTINCT hsm."muctieuid") AS so_muctieu
+FROM public."hosotrinhsat_muctieu" hsm;
