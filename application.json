@@ -26,12 +26,12 @@
   "evaluationVersion": 2,
   "pages": [
     {
-      "id": "Page1",
-      "isDefault": false
+      "id": "Trang Chủ",
+      "isDefault": true
     },
     {
       "id": "Public.kehoach",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "ChiTietKeHoach",
