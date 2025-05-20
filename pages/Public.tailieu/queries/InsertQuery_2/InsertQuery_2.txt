@@ -1,0 +1,26 @@
+INSERT INTO public."tailieu" (
+	"tengoc",
+	"tendich",
+	"duongdan",
+	"kichthuoc",
+	"domat",
+	"ngaybanhanh",
+	"ngaytaixuong",
+	"capdo",
+	"mota",
+	"muctieuid",
+	"taikhoanid"
+)
+VALUES (
+	'{{insert_form.formData.tengoc}}',
+	'{{insert_form.formData.tendich}}',
+	'{{insert_form.formData.duongdan}}',
+	'{{insert_form.formData.kichthuoc}}',
+	'{{insert_form.formData.domat}}',
+	'{{insert_form.formData.ngaybanhanh}}',
+	'{{insert_form.formData.ngaytaixuong}}',
+	'{{insert_form.formData.capdo}}',
+	'{{insert_form.formData.mota}}',
+	'{{insert_form.formData.muctieuid}}',
+	'{{insert_form.formData.taikhoanid}}'
+);

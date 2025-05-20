@@ -1,0 +1,16 @@
+SELECT
+    EXTRACT(YEAR FROM b.NgayBanHanh) AS Nam,
+    COUNT(CASE WHEN EXTRACT(MONTH FROM b.NgayBanHanh) BETWEEN 1 AND 6 THEN 1 END) AS NuaNamDau,
+    COUNT(CASE WHEN EXTRACT(MONTH FROM b.NgayBanHanh) BETWEEN 7 AND 12 THEN 1 END) AS NuaNamSau
+    
+FROM
+    BaoCao b
+JOIN
+    BaoCaoMaDoc bmd ON b.ID = bmd.BaoCaoID
+WHERE
+    b.LoaiBaoCao = 'Báo cáo Săn tìm mối nguy cơ' -- Loại báo cáo liên quan đến mã độc
+    AND b.NgayBanHanh BETWEEN '{{ DatePickerStart5_1.selectedDate }}' AND '{{ DatePickerEnd5_1.selectedDate }}'
+GROUP BY
+    EXTRACT(YEAR FROM b.NgayBanHanh)
+ORDER BY
+    Nam;

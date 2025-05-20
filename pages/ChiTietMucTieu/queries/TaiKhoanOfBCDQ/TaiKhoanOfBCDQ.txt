@@ -1,0 +1,11 @@
+SELECT tk.*
+FROM taikhoan tk
+JOIN baocaodoquet bcdq ON tk.id = bcdq.taikhoanid
+WHERE bcdq.muctieuid = {{appsmith.store.selectedMucTieuId}}
+  AND bcdq.baocaoid = ANY (
+    ARRAY[
+      {{ TableBCDQ.selectedRows.length > 0 
+          ? TableBCDQ.selectedRows.map(row => row.id).join(',') 
+          : 'NULL' 
+      }} 
+    ]::integer[]);

@@ -1,0 +1,4 @@
+SELECT kh.*
+FROM kehoach kh
+JOIN kehoach_muctieu khmt ON kh.id = khmt.kehoachid
+WHERE khmt.muctieuid = {{appsmith.store.selectedMucTieuId}};

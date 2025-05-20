@@ -3,41 +3,46 @@
   "appLayout": {
     "type": "FLUID"
   },
+  "applicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
+  },
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
   "color": "#F3F1C7",
   "evaluationVersion": 2,
   "pages": [
     {
-      "id": "Dashboard",
+      "id": "Page1",
       "isDefault": false
-    },
-    {
-      "id": "Orders",
-      "isDefault": false
-    },
-    {
-      "id": "Customers",
-      "isDefault": false
-    },
-    {
-      "id": "Products",
-      "isDefault": false
-    },
-    {
-      "id": "Returns",
-      "isDefault": false
-    },
-    {
-      "id": "ChiTietKeHoach",
-      "isDefault": true
     },
     {
       "id": "Public.kehoach",
+      "isDefault": true
+    },
+    {
+      "id": "ChiTietKeHoach",
       "isDefault": false
     },
     {
       "id": "Public.muctieu",
+      "isDefault": false
+    },
+    {
+      "id": "ChiTietMucTieu",
       "isDefault": false
     },
     {
@@ -49,19 +54,44 @@
       "isDefault": false
     },
     {
-      "id": "Public.baocao",
+      "id": "Quản lý báo cáo",
       "isDefault": false
     },
     {
-      "id": "Page2",
+      "id": "Quản lý các dữ liệu khác",
       "isDefault": false
     },
     {
-      "id": "Page3",
+      "id": "Public.taikhoan",
+      "isDefault": false
+    },
+    {
+      "id": "Public.tailieu",
+      "isDefault": false
+    },
+    {
+      "id": "Public.madoc",
       "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
     "type": "FLUID"
+  },
+  "unpublishedApplicationDetail": {
+    "navigationSetting": {
+      "colorStyle": "light",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "navStyle": "stacked",
+      "orientation": "top",
+      "position": "static",
+      "showNavbar": true,
+      "showSignIn": true
+    },
+    "themeSetting": {
+      "appMaxWidth": "LARGE",
+      "density": 1.0,
+      "sizing": 1.0
+    }
   }
 }

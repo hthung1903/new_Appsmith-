@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 32,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "p891iayj1z": {
+      "data": "{{JSEcharts_nam_1.fetchData.data}}",
+      "seriesName": "Số lượng báo cáo"
+    }
+  },
+  "chartName": "Thống kê theo năm",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( JSEcharts_nam_1.fetchData.data))(Chart1_.chartType) }}",
+  "customFusionChartConfig": "{{JSEcharts_nam_1.fetchData.data}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "customFusionChartConfig"
+    },
+    {
+      "key": "chartData.p891iayj1z.data"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "l28719jcvl",
+  "labelOrientation": "auto",
+  "leftColumn": 41,
+  "minWidth": 450,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 22,
+  "mobileTopRow": 0,
+  "needsErrorInfo": true,
+  "originalBottomRow": 43,
+  "originalTopRow": 11,
+  "parentColumnSpace": 19.9375,
+  "parentId": "0g12s30fpf",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 53,
+  "setAdaptiveYMin": true,
+  "showDataPointLabel": true,
+  "topRow": 0,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "bp18u7n6ki",
+  "widgetName": "Chart1_",
+  "xAxisName": "",
+  "yAxisName": ""
+}

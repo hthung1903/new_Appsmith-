@@ -1,0 +1,22 @@
+INSERT INTO public."madoc" (
+	"ten",
+	"ngaytiepnhan",
+	"donvibangiaomau",
+	"hosomadoc",
+	"c2serverip",
+	"hanhvi",
+	"noithuthap",
+	"layquausb",
+	"layquausbat",
+	"maso")
+VALUES (
+	'{{insert_form.formData.ten}}',
+	'{{insert_form.formData.ngaytiepnhan}}',
+	'{{insert_form.formData.donvibangiaomau}}',
+	'{{insert_form.formData.hosomadoc}}',
+	'{{insert_form.formData.c2serverip}}',
+	'{{insert_form.formData.hanhvi}}',
+	'{{insert_form.formData.noithuthap}}',
+	'{{insert_form.formData.layquausb}}',
+	'{{insert_form.formData.layquausbat}}',
+	'{{insert_form.formData.maso}}');

@@ -1,0 +1,13 @@
+SELECT
+    bc.ngaybanhanh AS ngaybaocao,
+    SUM(tl.kichthuoc) AS tongkichthuoc
+FROM
+    baocaololot bcl
+JOIN
+    baocao bc ON bcl.baocaoid = bc.id
+JOIN
+    tailieu tl ON bcl.tailieuid = tl.id
+GROUP BY
+    bc.ngaybanhanh
+ORDER BY
+    bc.ngaybanhanh;

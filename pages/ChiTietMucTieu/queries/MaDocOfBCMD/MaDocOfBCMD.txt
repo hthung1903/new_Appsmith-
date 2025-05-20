@@ -1,0 +1,11 @@
+SELECT md.*
+FROM madoc md
+JOIN baocaomadoc bcmd ON md.id = bcmd.madocid
+WHERE bcmd.muctieuid = {{appsmith.store.selectedMucTieuId}}
+  AND bcmd.baocaoid = ANY (
+    ARRAY[
+      {{ TableBCMD.selectedRows.length > 0 
+          ? TableBCMD.selectedRows.map(row => row.id).join(',') 
+          : 'NULL' 
+      }} 
+    ]::integer[]);

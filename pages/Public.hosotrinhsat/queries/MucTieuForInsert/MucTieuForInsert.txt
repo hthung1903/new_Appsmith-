@@ -1,0 +1,7 @@
+SELECT mt.tenmuctieu AS label, mt.id AS value
+FROM muctieu mt
+WHERE mt.id NOT IN (
+  SELECT muctieuid
+  FROM hosotrinhsat_muctieu
+  WHERE hosotrinhsatid = {{data_table.selectedRow.id}}
+);

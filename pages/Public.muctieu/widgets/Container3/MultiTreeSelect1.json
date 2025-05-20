@@ -1,0 +1,74 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowClear": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 33,
+  "boxShadow": "none",
+  "defaultOptionValue": "[]",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "options"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownOpen"
+    },
+    {
+      "key": "onDropdownClose"
+    }
+  ],
+  "expandAll": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "gfyjrbs8m9",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Mục Tiêu",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 66,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 59,
+  "mode": "SHOW_ALL",
+  "needsErrorInfo": false,
+  "onDropdownClose": "{{ChonMucTieu.run();}}",
+  "onDropdownOpen": "{{ChonMucTieu.run();}}",
+  "onOptionChange": "{{ChonMucTieu.run();}}",
+  "options": "{{ FilterMucTieu.data.reduce((acc, cur) => {\n  if (cur.muctieuid === null) {\n    // Là mục tiêu cha\n    acc.push({\n      label: cur.tenmuctieu,\n      value: cur.id,\n      children: []\n    });\n  } else {\n    // Là mục tiêu con\n    const parent = acc.find(item => item.value === cur.muctieuid);\n    if (parent) {\n      parent.children.push({\n        label: cur.tenmuctieu,\n        value: cur.id\n      });\n    }\n  }\n  return acc;\n}, []);}}",
+  "originalBottomRow": 33,
+  "originalTopRow": 26,
+  "parentColumnSpace": 20.25,
+  "parentId": "hffieccob1",
+  "parentRowSpace": 10,
+  "placeholderText": "Chọn Mục Tiêu",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "shouldScrollContents": true,
+  "topRow": 26,
+  "type": "MULTI_SELECT_TREE_WIDGET",
+  "version": 1,
+  "widgetId": "p9vj7vor2e",
+  "widgetName": "MultiTreeSelect1"
+}

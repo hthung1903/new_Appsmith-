@@ -1,0 +1,75 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 26,
+  "boxShadow": "none",
+  "defaultOptionValue": "[]",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    },
+    {
+      "key": "onDropdownOpen"
+    },
+    {
+      "key": "onDropdownClose"
+    }
+  ],
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "edd2f0jo6w",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Loại Mục Tiêu",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 56,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 9,
+  "mobileTopRow": 49,
+  "needsErrorInfo": false,
+  "onDropdownClose": "{{FilterMucTieu.run()}}",
+  "onDropdownOpen": "{{FilterMucTieu.run()}}",
+  "onOptionChange": "{{FilterMucTieu.run()}}",
+  "optionLabel": "name",
+  "optionValue": "code",
+  "originalBottomRow": 26,
+  "originalTopRow": 18,
+  "parentColumnSpace": 17.53125,
+  "parentId": "hffieccob1",
+  "parentRowSpace": 10,
+  "placeholderText": "Chọn Loại Mục Tiêu",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Chủ yếu\",\n    \"code\": \"Chủ yếu\"\n  },\n  {\n    \"name\": \"Thứ yếu\",\n    \"code\": \"Thứ yếu\"\n  }\n]",
+  "topRow": 18,
+  "type": "MULTI_SELECT_WIDGET_V2",
+  "version": 1,
+  "widgetId": "7yc7w2ijog",
+  "widgetName": "MultiSelectLoai"
+}

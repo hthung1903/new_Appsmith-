@@ -183,15 +183,6 @@
     },
     {
       "key": "schema.__root_schema__.children.mota.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.kehoachid.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.kehoachid.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.kehoachid.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -261,28 +252,6 @@
           "originalIdentifier": "danhmuc",
           "position": 5,
           "sourceData": "Trinh sát"
-        },
-        "kehoachid": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "accessor": "kehoachid",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.kehoachid))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
-          "identifier": "kehoachid",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Kehoachid",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "kehoachid",
-          "position": 8,
-          "sourceData": 1
         },
         "kinhdo": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",

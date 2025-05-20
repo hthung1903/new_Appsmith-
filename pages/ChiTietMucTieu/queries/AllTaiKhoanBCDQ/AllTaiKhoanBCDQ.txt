@@ -1,0 +1,4 @@
+SELECT DISTINCT tk.*
+FROM taikhoan tk
+JOIN baocaodoquet bcdq ON tk.id = bcdq.taikhoanid
+WHERE bcdq.muctieuid = {{ appsmith.store.selectedMucTieuId }};

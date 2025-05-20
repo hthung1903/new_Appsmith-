@@ -1,0 +1,5 @@
+SELECT 
+  tk.* 
+FROM taikhoan tk
+JOIN tailieu tl ON tl.taikhoanid = tk.id
+WHERE tl.id = {{ TableTL.selectedRow.id }};

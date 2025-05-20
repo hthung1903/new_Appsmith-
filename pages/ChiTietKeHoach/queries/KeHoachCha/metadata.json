@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT *\nFROM public.kehoach\nWHERE id = (\n  SELECT kehoachid\n  FROM public.kehoach\n  WHERE id = {{ appsmith.URL.queryParams.planId }}\n)\nLIMIT 1;",
+      "body": "SELECT *\nFROM public.kehoach\nWHERE id = (\n  SELECT kehoachid\n  FROM public.kehoach\n  WHERE id = {{ appsmith.store.selectedKeHoachId }}\n)\nLIMIT 1;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

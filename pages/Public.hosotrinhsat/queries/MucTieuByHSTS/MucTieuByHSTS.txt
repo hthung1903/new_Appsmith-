@@ -1,0 +1,4 @@
+SELECT mt.*
+FROM public.muctieu mt
+JOIN public.hosotrinhsat_muctieu htm ON mt.id = htm.muctieuid
+WHERE htm.hosotrinhsatid = {{data_table.selectedRow.id}};

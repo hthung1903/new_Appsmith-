@@ -113,16 +113,10 @@
       "key": "resetButtonStyles.buttonColor"
     },
     {
-      "key": "schema.__root_schema__.children.tenhoso.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.tenhoso.borderRadius"
     },
     {
       "key": "schema.__root_schema__.children.tenhoso.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.ngaybanhanh.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.ngaybanhanh.borderRadius"
@@ -170,9 +164,6 @@
       "key": "schema.__root_schema__.children.soturack.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.duongdanfile.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.duongdanfile.borderRadius"
     },
     {
@@ -183,6 +174,9 @@
     },
     {
       "key": "schema.__root_schema__.children.sodologic.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.duongdanfile.defaultValue"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -192,6 +186,9 @@
     },
     {
       "key": "schema.__root_schema__.children.ngaybanhanh.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngaysuadoi.defaultValue"
     }
   ],
   "dynamicTriggerPathList": [
@@ -210,7 +207,7 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{InsertQuery.run().then(() => {\n  SelectQuery.run();\n  resetWidget(\"Container3\", true);\n  resetWidget(\"FilePicker1\", false);\n}).catch(() => {});}}",
+  "onSubmit": "{{InsertQuery.run().then(() => {\n  SelectQuery.run();\n  resetWidget(\"Container3\", true);\n  resetWidget(\"insert_form\", false);\n  closeModal(Insert_Modal.name);\n}).catch(() => {});}}",
   "originalBottomRow": 86,
   "originalTopRow": 11,
   "parentColumnSpace": 8.125,
@@ -240,12 +237,12 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "null",
-          "defaultValue": "{{((sourceData, formData, fieldState) => ( Api4.data?.saved_path || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( appsmith.store.uploadedFilePath || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "duongdanfile",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
@@ -287,7 +284,7 @@
           "convertToISO": false,
           "dataType": "string",
           "dateFormat": "YYYY-MM-DD",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.ngaybanhanh, \"YYYY-MM-DD\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Datepicker",
           "identifier": "ngaybanhanh",
           "isCustomField": false,
@@ -310,20 +307,25 @@
           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "boxShadow": "none",
           "children": {},
+          "closeOnSelection": false,
+          "convertToISO": false,
           "dataType": "null",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ngaysuadoi))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
+          "dateFormat": "YYYY-MM-DD HH:mm",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.ngaysuadoi, \"YYYY-MM-DD\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "fieldType": "Datepicker",
           "identifier": "ngaysuadoi",
           "isCustomField": false,
           "isDisabled": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
           "label": "Ngaysuadoi",
           "labelTextSize": "0.875rem",
+          "maxDate": "2121-12-31T18:29:00.000Z",
+          "minDate": "1920-12-31T18:30:00.000Z",
           "originalIdentifier": "ngaysuadoi",
-          "position": 2
+          "position": 2,
+          "shortcuts": false,
+          "timePrecision": "minute"
         },
         "sodologic": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -332,12 +334,12 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => ( Api2.data?.saved_path || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( appsmith.store.uploadedSDLG || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "sodologic",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
@@ -354,7 +356,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => ( ApiUpload.data?.saved_path || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( appsmith.store.uploadedSDTC || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "sodotuyencap",
@@ -376,12 +378,12 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => ( Api3.data?.saved_path || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( appsmith.store.uploadedSTR || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "soturack",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
@@ -398,7 +400,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.tenhoso))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "tenhoso",

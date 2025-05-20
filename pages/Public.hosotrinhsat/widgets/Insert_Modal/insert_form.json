@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 61,
+  "bottomRow": 52,
   "boxShadow": "none",
   "childStylesheet": {
     "ARRAY": {
@@ -86,9 +86,6 @@
   "displayName": "JSON Form",
   "dynamicBindingPathList": [
     {
-      "key": "sourceData"
-    },
-    {
       "key": "schema.__root_schema__.children.tenhoso.defaultValue"
     },
     {
@@ -122,9 +119,6 @@
       "key": "schema.__root_schema__.children.muctieuid.borderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.duongdanfile.defaultValue"
-    },
-    {
       "key": "borderRadius"
     },
     {
@@ -143,7 +137,13 @@
       "key": "schema.__root_schema__.children.duongdanfile.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.muctieuid.options"
+      "key": "submitButtonStyles.buttonColor"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "schema.__root_schema__.children.duongdanfile.defaultValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -153,6 +153,9 @@
     },
     {
       "key": "schema.__root_schema__.children.ngaybanhanh.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.ngaysuadoi.defaultValue"
     },
     {
       "key": "sourceData"
@@ -174,10 +177,10 @@
   "isVisible": true,
   "key": "h9l9ozr8op",
   "labelTextSize": "0.875rem",
-  "leftColumn": 0,
+  "leftColumn": 1,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{InsertQuery.run().then(() => {\n  SelectQuery.run();\n  resetWidget(\"FilePickerUpload\", true);\n  resetWidget(\"insert_form\", true);\n}).catch(() => {\n  showAlert(\"Error while inserting resource!\", 'error');\n});}}",
+  "onSubmit": "{{InsertQuery.run().then(() => {\n  SelectQuery.run().then(()=>\n\t{ showAlert( \"✅ Thêm Thành Công\")}); resetWidget(\"FilePickerUpload\", true);\n  resetWidget(\"insert_form\", true);\nstoreValue(\"uploadedFilePath\", \"\");\n\t\n}).catch(() => {\n  showAlert(\"Error while inserting resource!\", 'error');\n});}}",
   "originalBottomRow": 60,
   "originalTopRow": 4,
   "parentColumnSpace": 8.125,
@@ -191,7 +194,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "SECONDARY"
   },
-  "rightColumn": 62,
+  "rightColumn": 63,
   "schema": {
     "__root_schema__": {
       "accessor": "__root_schema__",
@@ -207,19 +210,20 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "null",
-          "defaultValue": "{{((sourceData, formData, fieldState) => ( ApiUpload.data?.saved_path || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( appsmith.store.uploadedFilePath || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "duongdanfile",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
           "label": "Duongdanfile",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "duongdanfile",
-          "position": 4
+          "placeholderText": "",
+          "position": 3
         },
         "muctieuid": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -235,13 +239,13 @@
           "isDisabled": false,
           "isFilterable": true,
           "isRequired": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Tenmuctieu",
           "labelTextSize": "0.875rem",
           "onOptionChange": "",
-          "options": "{{\n  (MucTieuQuery.data || []).map(item => ({\n    label: item.tenmuctieu,\n    value: item.id\n  }))\n}}",
+          "options": "",
           "originalIdentifier": "muctieuid",
-          "position": 3,
+          "position": 6,
           "serverSideFiltering": false,
           "sourceData": 1
         },
@@ -282,7 +286,7 @@
           "convertToISO": false,
           "dataType": "null",
           "dateFormat": "YYYY-MM-DD HH:mm",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.ngaysuadoi))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( moment(sourceData.ngaybanhanh, \"YYYY-MM-DD\").toISOString() ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Datepicker",
           "identifier": "ngaysuadoi",
           "isCustomField": false,
@@ -325,9 +329,9 @@
           "label": ""
         },
         "undefined": {
-          "isVisible": false,
+          "isVisible": true,
           "label": "",
-          "position": 6
+          "position": 5
         }
       },
       "dataType": "object",
@@ -362,7 +366,7 @@
     "buttonVariant": "PRIMARY"
   },
   "title": "Insert Row",
-  "topRow": 5,
+  "topRow": 6,
   "type": "JSON_FORM_WIDGET",
   "useSourceData": false,
   "version": 1,

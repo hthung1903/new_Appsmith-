@@ -59,7 +59,7 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "ApiUpload",
     "pageId": "Public.hosotrinhsat",
     "userSetOnLoad": false

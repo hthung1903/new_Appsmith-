@@ -1,0 +1,13 @@
+SELECT
+    DATE_TRUNC('month', bc.ngaybanhanh) AS x,
+    COUNT(DISTINCT bcl.muctieuid) AS y
+FROM
+    baocaololot bcl
+JOIN
+    baocao bc ON bcl.baocaoid = bc.id
+JOIN
+    muctieu mt ON bcl.muctieuid = mt.id
+GROUP BY
+    x
+ORDER BY
+    x;

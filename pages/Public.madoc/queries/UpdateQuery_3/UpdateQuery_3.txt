@@ -1,0 +1,12 @@
+UPDATE public."madoc" SET
+		"ten" = '{{update_form.fieldState.ten.isVisible ? update_form.formData.ten : update_form.sourceData.ten}}',
+		"ngaytiepnhan" = '{{update_form.fieldState.ngaytiepnhan.isVisible ? update_form.formData.ngaytiepnhan : update_form.sourceData.ngaytiepnhan}}',
+    "donvibangiaomau" = '{{update_form.fieldState.donvibangiaomau.isVisible ? update_form.formData.donvibangiaomau : update_form.sourceData.donvibangiaomau}}',
+		"hosomadoc" = '{{update_form.fieldState.hosomadoc.isVisible ? update_form.formData.hosomadoc : update_form.sourceData.hosomadoc}}',
+		"c2serverip" = '{{update_form.fieldState.c2serverip.isVisible ? update_form.formData.c2serverip : update_form.sourceData.c2serverip}}',
+		"hanhvi" = '{{update_form.fieldState.hanhvi.isVisible ? update_form.formData.hanhvi : update_form.sourceData.hanhvi}}',
+		"noithuthap" = '{{update_form.fieldState.noithuthap.isVisible ? update_form.formData.noithuthap : update_form.sourceData.noithuthap}}',
+		"layquausb" = '{{update_form.fieldState.layquausb.isVisible ? update_form.formData.layquausb : update_form.sourceData.layquausb}}',
+		"layquausbat" = '{{update_form.fieldState.layquausbat.isVisible ? update_form.formData.layquausbat : update_form.sourceData.layquausbat}}',
+		"maso" = '{{update_form.fieldState.maso.isVisible ? update_form.formData.maso : update_form.sourceData.maso}}'
+WHERE "id" = {{data_table.selectedRow.id}};

@@ -1,0 +1,4 @@
+SELECT DISTINCT tl.*
+FROM tailieu tl
+JOIN baocaololot bcll ON tl.id = bcll.tailieuid
+WHERE bcll.muctieuid = {{ appsmith.store.selectedMucTieuId }};

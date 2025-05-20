@@ -1,0 +1,14 @@
+SELECT
+    m.DonViBanGiaoMau AS x,
+    COUNT(DISTINCT bm.ID) AS y
+FROM
+    MaDoc m
+JOIN
+    BoMauMaDoc bm ON m.ID = bm.MaDocID
+WHERE
+    m.DonViBanGiaoMau IS NOT NULL
+    AND m.NgayTiepNhan BETWEEN '{{ DatePickerStart5_1.selectedDate }}' AND '{{ DatePickerEnd5_1.selectedDate }}'
+GROUP BY
+    m.DonViBanGiaoMau
+ORDER BY
+    y DESC;

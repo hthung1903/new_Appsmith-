@@ -1,0 +1,11 @@
+SELECT tl.*
+FROM tailieu tl
+JOIN baocaotrinhsat bcts ON tl.id = bcts.tailieuid
+WHERE bcts.muctieuid = {{ appsmith.store.selectedMucTieuId }}
+  AND bcts.baocaoid = ANY (
+    ARRAY[
+      {{ TableBCTS.selectedRows.length > 0 
+          ? TableBCTS.selectedRows.map(row => row.id).join(',') 
+          : 'NULL' 
+      }} 
+    ]::integer[]);

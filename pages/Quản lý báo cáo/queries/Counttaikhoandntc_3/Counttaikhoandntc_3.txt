@@ -1,0 +1,15 @@
+SELECT 
+    mt.TenMucTieu,
+    COUNT(tk.ID) AS SoLuongTaiKhoanThamNhapDuoc
+FROM 
+    TaiKhoan tk
+JOIN 
+    Domain d ON tk.DomainID = d.ID
+JOIN 
+    MucTieu mt ON d.MucTieuID = mt.ID
+WHERE 
+    tk.TrangThai = 'Đăng nhập thành công'
+GROUP BY 
+    mt.TenMucTieu
+ORDER BY 
+    SoLuongTaiKhoanThamNhapDuoc DESC;

@@ -1,0 +1,12 @@
+SELECT
+    TO_CHAR(NgayBanHanh, 'MM/YYYY') AS x,
+    COUNT(*) AS y
+FROM
+    BaoCao
+WHERE
+    LoaiBaoCao = 'Báo cáo lộ lọt tài khoản'
+    AND NgayBanHanh BETWEEN '{{ DatePickerStart4_1.selectedDate }}' AND '{{ DatePickerEnd4_1.selectedDate }}'
+GROUP BY
+    TO_CHAR(NgayBanHanh, 'MM/YYYY')
+ORDER BY
+    MIN(NgayBanHanh);

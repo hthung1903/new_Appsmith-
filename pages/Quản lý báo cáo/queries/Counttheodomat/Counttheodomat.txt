@@ -1,0 +1,16 @@
+SELECT
+    bc.ngaybanhanh AS ngaybaocao,
+    tl.domat,
+    COUNT(DISTINCT tl.id) AS tongsotaileu
+FROM
+    baocaololot bcl
+JOIN
+    baocao bc ON bcl.baocaoid = bc.id
+JOIN
+    tailieu tl ON bcl.tailieuid = tl.id
+GROUP BY
+    bc.ngaybanhanh,
+    tl.domat
+ORDER BY
+    bc.ngaybanhanh,
+    tl.domat;

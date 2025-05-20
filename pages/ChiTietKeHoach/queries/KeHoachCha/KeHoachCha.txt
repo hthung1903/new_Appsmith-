@@ -3,6 +3,6 @@ FROM public.kehoach
 WHERE id = (
   SELECT kehoachid
   FROM public.kehoach
-  WHERE id = {{ appsmith.URL.queryParams.planId }}
+  WHERE id = {{ appsmith.store.selectedKeHoachId }}
 )
 LIMIT 1;

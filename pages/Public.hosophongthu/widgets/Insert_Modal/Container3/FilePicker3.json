@@ -23,7 +23,7 @@
     }
   ],
   "dynamicTyping": true,
-  "fileDataType": "Text",
+  "fileDataType": "Base64",
   "files": [],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
@@ -41,7 +41,7 @@
   "mobileRightColumn": 46,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
-  "onFilesSelected": "{{Api3.run()}}",
+  "onFilesSelected": "{{JShspt.uploadFileSTR();}}",
   "parentColumnSpace": 13.875,
   "parentId": "uaw89iw4at",
   "parentRowSpace": 10,

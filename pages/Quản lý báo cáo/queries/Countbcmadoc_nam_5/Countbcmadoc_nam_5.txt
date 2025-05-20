@@ -1,0 +1,14 @@
+SELECT
+    EXTRACT(YEAR FROM b.NgayBanHanh) AS Nam,
+    COUNT(DISTINCT bmd.MaDocID) AS SoLuongMaDoc  -- Đếm số lượng mã độc duy nhất
+FROM
+    BaoCao b
+JOIN
+    BaoCaoMaDoc bmd ON b.ID = bmd.BaoCaoID  -- Kết nối với bảng mã độc
+WHERE 
+    b.NgayBanHanh BETWEEN '{{ DatePickerStart4_1.selectedDate }}' AND '{{ DatePickerEnd4_1.selectedDate }}'
+    AND b.LoaiBaoCao = 'Báo cáo Săn tìm mối nguy cơ'  -- Loại báo cáo về mã độc
+GROUP BY
+    EXTRACT(YEAR FROM b.NgayBanHanh)
+ORDER BY
+    Nam;

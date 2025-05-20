@@ -1,0 +1,3 @@
+SELECT "loaithietbi", COUNT(*) AS "SoLuong"
+FROM public.e_thietbimang
+GROUP BY "loaithietbi"

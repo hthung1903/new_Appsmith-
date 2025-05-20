@@ -1,0 +1,59 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "defaultOptionValue": "1",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "tlhzq24y3c",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelText": "Thống kê: ",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 11,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "code",
+  "parentColumnSpace": 19.625,
+  "parentId": "rwu00inlcy",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 23,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  {\n    \"name\": \"Số lượng báo cáo theo hướng mục tiêu\",\n    \"code\": \"1\"\n  },{\n    \"name\": \"Tổng số báo cáo báo cáo trinh sát\",\n    \"code\": \"2\"\n  },{\n    \"name\": \"Tổng số mục tiêu lộ lọt tài liệu\",\n    \"code\": \"3\"\n  },\n\t\n  {\n    \"name\": \"Tổng số tài liệu lộ lọt \",\n    \"code\": \"4\"\n  },\n  {\n    \"name\": \"Tổng dung lượng lộ lọt\",\n    \"code\": \"5\"\n  }\n]",
+  "topRow": 1,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "kbqev0mst8",
+  "widgetName": "Selectloaithognke"
+}

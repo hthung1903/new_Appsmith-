@@ -1,0 +1,17 @@
+SELECT
+    EXTRACT(YEAR FROM b.NgayBanHanh) AS Nam,
+    COUNT(DISTINCT CASE WHEN m.LayQuaUSB = TRUE THEN m.ID END) AS MaDocLayQuaUSB,
+    COUNT(DISTINCT CASE WHEN m.LayQuaUSBAT = TRUE THEN m.ID END) AS MaDocLayQuaUSBAT
+FROM
+    MaDoc m
+JOIN
+    BaoCaoMaDoc bmd ON m.ID = bmd.MaDocID
+JOIN
+    BaoCao b ON bmd.BaoCaoID = b.ID
+WHERE
+    b.NgayBanHanh BETWEEN '{{ DatePickerStart5_1.selectedDate }}' AND '{{ DatePickerEnd5_1.selectedDate }}'
+    AND b.LoaiBaoCao = 'Báo cáo Săn tìm mối nguy cơ'
+GROUP BY
+    EXTRACT(YEAR FROM b.NgayBanHanh)
+ORDER BY
+    Nam;

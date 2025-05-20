@@ -1,0 +1,11 @@
+SELECT
+    EXTRACT(YEAR FROM NgayBanHanh) AS Nam,
+    COUNT(*) AS SoLuongBaoCao
+FROM
+    BaoCao
+WHERE 
+    ngaybanhanh BETWEEN '{{ DatePickerStart1_1.selectedDate }}' AND '{{ DatePickerEnd1_1.selectedDate }}'
+GROUP BY
+    EXTRACT(YEAR FROM NgayBanHanh)
+ORDER BY
+    Nam;

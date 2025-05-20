@@ -1,0 +1,4 @@
+SELECT DISTINCT quocgia AS name, quocgia AS code
+FROM muctieu
+WHERE quocgia IS NOT NULL
+ORDER BY quocgia;

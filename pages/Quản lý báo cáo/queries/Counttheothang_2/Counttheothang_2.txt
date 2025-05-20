@@ -1,0 +1,12 @@
+SELECT
+    TO_CHAR(NgayBanHanh, 'MM/YYYY') AS ThangNam,
+    COUNT(*) AS SoLuongBaoCao
+FROM
+    BaoCao
+WHERE
+    LoaiBaoCao = 'Báo cáo Trinh sát chuyên sâu'
+    AND NgayBanHanh BETWEEN '{{ DatePickerStart2_1.selectedDate }}' AND '{{ DatePickerEnd2_1.selectedDate }}'
+GROUP BY
+    TO_CHAR(NgayBanHanh, 'MM/YYYY')
+ORDER BY
+    ThangNam;

@@ -1,0 +1,4 @@
+SELECT DISTINCT md.*
+FROM madoc md
+JOIN baocaomadoc bcmd ON md.id = bcmd.madocid
+WHERE bcmd.muctieuid = {{ appsmith.store.selectedMucTieuId }};

@@ -1,0 +1,15 @@
+SELECT *
+FROM muctieu
+WHERE 
+  (
+    {{ MultiSelectQuocGia.selectedOptionValues.length === 0 }} 
+    OR quocgia = ANY(ARRAY[{{ MultiSelectQuocGia.selectedOptionValues.map(x => `'${x}'`).join(',') }}]::text[])
+  )
+  AND (
+    {{ MultiSelectDanhMuc.selectedOptionValues.length === 0 }} 
+    OR danhmuc = ANY(ARRAY[{{ MultiSelectDanhMuc.selectedOptionValues.map(x => `'${x}'`).join(',') }}]::text[])
+  )
+  AND (
+    {{ MultiSelectLoai.selectedOptionValues.length === 0 }} 
+    OR loaimuctieu = ANY(ARRAY[{{ MultiSelectLoai.selectedOptionValues.map(x => `'${x}'`).join(',') }}]::text[])
+  );

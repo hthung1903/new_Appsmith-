@@ -1,0 +1,13 @@
+SELECT
+    EXTRACT(YEAR FROM NgayBanHanh) AS Nam,
+    COUNT(CASE WHEN EXTRACT(MONTH FROM NgayBanHanh) BETWEEN 1 AND 6 THEN 1 END) AS NuaNamDau,
+    COUNT(CASE WHEN EXTRACT(MONTH FROM NgayBanHanh) BETWEEN 7 AND 12 THEN 1 END) AS NuaNamSau
+FROM
+    BaoCao
+WHERE
+    LoaiBaoCao = 'Báo cáo Trinh sát chuyên sâu'
+    AND NgayBanHanh BETWEEN '{{ DatePickerStart2_1.selectedDate }}' AND '{{ DatePickerEnd2_1.selectedDate }}'
+GROUP BY
+    EXTRACT(YEAR FROM NgayBanHanh)
+ORDER BY
+    Nam;

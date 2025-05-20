@@ -1,0 +1,10 @@
+SELECT 
+	COUNT(d.id) AS y,
+  m.quocgia as x
+  
+FROM 
+  domain d
+JOIN 
+  muctieu m ON d.muctieuid = m.id
+GROUP BY 
+  m.quocgia

@@ -1,0 +1,13 @@
+UPDATE public."tailieu" SET
+		"tengoc" = '{{update_form.fieldState.tengoc.isVisible ? update_form.formData.tengoc : update_form.sourceData.tengoc}}',
+		"tendich" = '{{update_form.fieldState.tendich.isVisible ? update_form.formData.tendich : update_form.sourceData.tendich}}',
+    "duongdan" = '{{update_form.fieldState.duongdan.isVisible ? update_form.formData.duongdan : update_form.sourceData.duongdan}}',
+		"kichthuoc" = '{{update_form.fieldState.kichthuoc.isVisible ? update_form.formData.kichthuoc : update_form.sourceData.kichthuoc}}',
+		"domat" = '{{update_form.fieldState.domat.isVisible ? update_form.formData.domat : update_form.sourceData.domat}}',
+		"ngaybanhanh" = '{{update_form.fieldState.ngaybanhanh.isVisible ? update_form.formData.ngaybanhanh : update_form.sourceData.ngaybanhanh}}',
+		"ngaytaixuong" = '{{update_form.fieldState.ngaytaixuong.isVisible ? update_form.formData.ngaytaixuong : update_form.sourceData.ngaytaixuong}}',
+		"capdo" = '{{update_form.fieldState.capdo.isVisible ? update_form.formData.capdo : update_form.sourceData.capdo}}',
+		"mota" = '{{update_form.fieldState.mota.isVisible ? update_form.formData.mota : update_form.sourceData.mota}}',
+		"muctieuid" = '{{update_form.fieldState.muctieuid.isVisible ? update_form.formData.muctieuid : update_form.sourceData.muctieuid}}',
+		"taikhoanid" = '{{update_form.fieldState.taikhoanid.isVisible ? update_form.formData.taikhoanid : update_form.sourceData.taikhoanid}}'
+	WHERE "id" = {{data_table.selectedRow.id}};

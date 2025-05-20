@@ -1,0 +1,7 @@
+SELECT 
+  CONCAT('Q', EXTRACT(QUARTER FROM ngaybanhanh), '/', EXTRACT(YEAR FROM ngaybanhanh)) AS x,
+  loaikehoach AS series,
+  COUNT(*) AS y
+FROM public.kehoach
+GROUP BY EXTRACT(YEAR FROM ngaybanhanh), EXTRACT(QUARTER FROM ngaybanhanh), loaikehoach
+ORDER BY x, series;

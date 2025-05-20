@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * \nFROM public.baocao\nWHERE kehoachid = {{ appsmith.URL.queryParams.planId }}\n",
+      "body": "SELECT * \nFROM public.baocao\nWHERE kehoachid = {{ appsmith.store.selectedKeHoachId }}\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

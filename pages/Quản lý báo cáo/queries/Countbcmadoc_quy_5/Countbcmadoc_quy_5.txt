@@ -1,0 +1,18 @@
+SELECT
+    EXTRACT(YEAR FROM b.NgayBanHanh) AS Nam,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM b.NgayBanHanh) = 1 THEN 1 END) AS Quy1,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM b.NgayBanHanh) = 2 THEN 1 END) AS Quy2,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM b.NgayBanHanh) = 3 THEN 1 END) AS Quy3,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM b.NgayBanHanh) = 4 THEN 1 END) AS Quy4,
+    COUNT(*) AS TongSo
+FROM
+    BaoCao b
+JOIN
+    BaoCaoMaDoc bmd ON b.ID = bmd.BaoCaoID
+WHERE
+    b.LoaiBaoCao = 'Báo cáo Săn tìm mối nguy cơ' -- Hoặc loại báo cáo phù hợp với mã độc
+    AND b.NgayBanHanh BETWEEN '{{ DatePickerStart5_1.selectedDate }}' AND '{{ DatePickerEnd5_1.selectedDate }}'
+GROUP BY
+    EXTRACT(YEAR FROM b.NgayBanHanh)
+ORDER BY
+    Nam;

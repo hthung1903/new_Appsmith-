@@ -1,0 +1,19 @@
+SELECT
+    EXTRACT(YEAR FROM bc.NgayBanHanh) AS Nam,
+    COUNT(DISTINCT CASE WHEN EXTRACT(QUARTER FROM bc.NgayBanHanh) = 1 THEN bcdq.MucTieuID END) AS Quy1,
+    COUNT(DISTINCT CASE WHEN EXTRACT(QUARTER FROM bc.NgayBanHanh) = 2 THEN bcdq.MucTieuID END) AS Quy2,
+    COUNT(DISTINCT CASE WHEN EXTRACT(QUARTER FROM bc.NgayBanHanh) = 3 THEN bcdq.MucTieuID END) AS Quy3,
+    COUNT(DISTINCT CASE WHEN EXTRACT(QUARTER FROM bc.NgayBanHanh) = 4 THEN bcdq.MucTieuID END) AS Quy4
+FROM
+    BaoCaoDoQuet bcdq
+JOIN
+    BaoCao bc ON bcdq.BaoCaoID = bc.ID
+WHERE
+     (
+        ('{{ DatePickerStart3_1.selectedDate }}' = '' OR '{{ DatePickerEnd3_1.selectedDate }}' = '')
+        OR (bc.NgayBanHanh BETWEEN TO_DATE('{{ DatePickerStart3_1.selectedDate }}', 'YYYY-MM-DD') AND TO_DATE('{{ DatePickerEnd3_1.selectedDate }}', 'YYYY-MM-DD'))
+    )
+GROUP BY
+    EXTRACT(YEAR FROM bc.NgayBanHanh)
+ORDER BY
+    Nam;

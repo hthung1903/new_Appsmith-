@@ -1,0 +1,4 @@
+SELECT hsts.*
+FROM hosotrinhsat hsts
+JOIN hosotrinhsat_muctieu hstsmt ON hsts.id = hstsmt.hosotrinhsatid
+WHERE hstsmt.muctieuid = {{appsmith.store.selectedMucTieuId}};

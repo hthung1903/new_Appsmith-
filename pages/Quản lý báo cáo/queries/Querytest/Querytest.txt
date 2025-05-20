@@ -1,0 +1,16 @@
+SELECT
+    m.NoiThuThap AS NoiThuThap,
+    COUNT(DISTINCT m.ID) AS SoLuongMaDoc
+FROM
+    MaDoc m
+JOIN
+    BaoCaoMaDoc bmd ON m.ID = bmd.MaDocID
+JOIN
+    BaoCao b ON bmd.BaoCaoID = b.ID
+WHERE
+    b.NgayBanHanh BETWEEN '{{ DatePickerStart4_1.selectedDate }}' AND '{{ DatePickerEnd4_1.selectedDate }}'
+    AND b.LoaiBaoCao = 'Báo cáo Săn tìm mối nguy cơ'  -- Loại báo cáo về mã độc
+GROUP BY
+    m.NoiThuThap
+ORDER BY
+    SoLuongMaDoc DESC;

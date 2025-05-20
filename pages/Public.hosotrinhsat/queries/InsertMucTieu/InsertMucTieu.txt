@@ -1,0 +1,2 @@
+INSERT INTO public.hosotrinhsat_muctieu (hosotrinhsatid, muctieuid)
+SELECT {{data_table.selectedRow.id}}, unnest(ARRAY[{{Insert_MucTieu.formData.tenmuctieu.join(',')}}]::int[]);

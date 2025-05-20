@@ -1,0 +1,46 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "regression-chart",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "samtd1s5j6",
+  "leftColumn": 61,
+  "minWidth": 50,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 39,
+  "mobileRightColumn": 43,
+  "mobileTopRow": 4,
+  "needsErrorInfo": false,
+  "onClick": "{{Counttheocapbaocao_1.run().then(() => {\n  JSEcharts_capbaocao_1.fetchData();\n});\nCounttheonam_1.run().then(() => {\n  JSEcharts_nam_1.fetchData();\n});\nCounttheoquy_1.run().then(() => {\n  JSEcharts_quy_1.fetchData();\n});\nCounttheothang_1.run().then(() => {\n  JSEcharts_thang_1.fetchData();\n});\nCounttheo6thang_1.run().then(() => {\n  JSEcharts_6thang_1.fetchData();\n});}}",
+  "parentColumnSpace": 19.9375,
+  "parentId": "dvl9hvrv62",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "topRow": 2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "eec69zorjq",
+  "widgetName": "Charts1_1"
+}

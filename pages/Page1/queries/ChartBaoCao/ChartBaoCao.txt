@@ -1,0 +1,4 @@
+SELECT loaibaocao, COUNT(*) as count
+FROM public.baocao
+GROUP BY loaibaocao
+ORDER BY count DESC;

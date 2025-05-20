@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"hosotrinhsat\" (\n\t\"tenhoso\",\n\t\"ngaybanhanh\",\n\t\"ngaysuadoi\",\n\t\"muctieuid\",\n\t\"duongdanfile\")\nVALUES (\n\t'{{insert_form.formData.tenhoso}}',\n\t'{{insert_form.formData.ngaybanhanh}}',\n\t'{{insert_form.formData.ngaysuadoi}}',\n\t'{{insert_form.formData.muctieuid}}',\n\t'{{insert_form.formData.duongdanfile}}');",
+      "body": "INSERT INTO public.\"hosotrinhsat\" (\n    \"tenhoso\",\n    \"ngaybanhanh\"\n    {{ insert_form.formData.ngaysuadoi ? ', \"ngaysuadoi\"' : '' }},\n    \"duongdanfile\"\n)\nVALUES (\n    '{{insert_form.formData.tenhoso}}',\n    '{{insert_form.formData.ngaybanhanh}}'\n    {{ insert_form.formData.ngaysuadoi ? \", '\" + insert_form.formData.ngaysuadoi + \"'\" : '' }},\n    '{{insert_form.formData.duongdanfile}}'\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "name": "InsertQuery",
     "pageId": "Public.hosotrinhsat",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

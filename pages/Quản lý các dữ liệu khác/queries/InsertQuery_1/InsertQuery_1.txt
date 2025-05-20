@@ -1,0 +1,16 @@
+INSERT INTO public."taikhoan" (
+	"username",
+	"domainid",
+	"password",
+	"trangthai",
+	"mota",
+	"capdo",
+	"ngayphathien")
+VALUES (
+	'{{insert_form.formData.username}}',
+	'{{insert_form.formData.domainid}}',
+	'{{insert_form.formData.password}}',
+	'{{insert_form.formData.trangthai}}',
+	'{{insert_form.formData.mota}}',
+	'{{insert_form.formData.capdo}}',
+	'{{insert_form.formData.ngayphathien}}');

@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6811d55e4101ca4f4d2f6d2e_d115fa6b-3077-4464-8d1b-155faea7e113",
+  "id": "Quản lý báo cáo_JSOpenfile",
+  "unpublishedCollection": {
+    "name": "JSOpenfile",
+    "pageId": "Quản lý báo cáo",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+SELECT
+    TO_CHAR(b.NgayBanHanh, 'MM/YYYY') AS ThangNam,
+    tl.DoMat,
+    COUNT(DISTINCT tl.ID) AS SoTaiLieuLoLot
+FROM
+    BaoCao b
+JOIN
+    BaoCaoLoLot bll ON b.ID = bll.BaoCaoID
+JOIN
+    TaiLieu tl ON bll.TaiLieuID = tl.ID
+WHERE
+    b.LoaiBaoCao = 'Báo cáo lộ lọt tài khoản'
+    AND b.NgayBanHanh BETWEEN '{{DatePickerStart4_1.selectedDate}}' AND '{{DatePickerEnd4_1.selectedDate}}'
+GROUP BY
+    TO_CHAR(b.NgayBanHanh, 'MM/YYYY'),
+    tl.DoMat
+ORDER BY
+    TO_DATE(TO_CHAR(b.NgayBanHanh, 'MM/YYYY'), 'MM/YYYY'),
+    CASE tl.DoMat
+        WHEN 'Tối mật' THEN 1
+        WHEN 'Mật' THEN 2
+        WHEN 'Hạn chế' THEN 3
+        ELSE 4
+    END;

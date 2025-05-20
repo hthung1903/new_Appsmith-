@@ -1,7 +1,7 @@
 UPDATE public."hosotrinhsat" SET
-		"tenhoso" = '{{update_form.fieldState.tenhoso.isVisible ? update_form.formData.tenhoso : update_form.sourceData.tenhoso}}',
-		"ngaybanhanh" = '{{update_form.fieldState.ngaybanhanh.isVisible ? update_form.formData.ngaybanhanh : update_form.sourceData.ngaybanhanh}}',
-    "ngaysuadoi" = '{{update_form.fieldState.ngaysuadoi.isVisible ? update_form.formData.ngaysuadoi : update_form.sourceData.ngaysuadoi}}',
-		"muctieuid" = '{{update_form.fieldState.muctieuid.isVisible ? update_form.formData.muctieuid : update_form.sourceData.muctieuid}}',
-		"duongdanfile" = '{{update_form.fieldState.duongdanfile.isVisible ? update_form.formData.duongdanfile : update_form.sourceData.duongdanfile}}'
+		"tenhoso" = '{{view_form.fieldState.tenhoso.isVisible ? view_form.formData.tenhoso : view_form.sourceData.tenhoso}}',
+		"ngaybanhanh" = '{{view_form.fieldState.ngaybanhanh.isVisible ? view_form.formData.ngaybanhanh : view_form.sourceData.ngaybanhanh}}',
+    "ngaysuadoi" = '{{view_form.fieldState.ngaysuadoi.isVisible ? view_form.formData.ngaysuadoi : view_form.sourceData.ngaysuadoi}}',
+		"muctieuid" = '{{view_form.fieldState.muctieuid.isVisible ? view_form.formData.muctieuid : view_form.sourceData.muctieuid}}',
+		"duongdanfile" = '{{view_form.fieldState.duongdanfile.isVisible ? view_form.formData.duongdanfile : view_form.sourceData.duongdanfile}}'
 WHERE "id" = {{data_table.selectedRow.id}};

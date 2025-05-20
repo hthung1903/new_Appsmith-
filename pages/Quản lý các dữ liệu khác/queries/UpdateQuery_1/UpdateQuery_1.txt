@@ -1,0 +1,9 @@
+UPDATE public."taikhoan" SET
+		"username" = '{{update_form.fieldState.username.isVisible ? update_form.formData.username : update_form.sourceData.username}}',
+		"domainid" = '{{update_form.fieldState.domainid.isVisible ? update_form.formData.domainid : update_form.sourceData.domainid}}',
+    "password" = '{{update_form.fieldState.password.isVisible ? update_form.formData.password : update_form.sourceData.password}}',
+		"trangthai" = '{{update_form.fieldState.trangthai.isVisible ? update_form.formData.trangthai : update_form.sourceData.trangthai}}',
+		"mota" = '{{update_form.fieldState.mota.isVisible ? update_form.formData.mota : update_form.sourceData.mota}}',
+		"capdo" = '{{update_form.fieldState.capdo.isVisible ? update_form.formData.capdo : update_form.sourceData.capdo}}',
+		"ngayphathien" = '{{update_form.fieldState.ngayphathien.isVisible ? update_form.formData.ngayphathien : update_form.sourceData.ngayphathien}}'
+WHERE "id" = {{data_table.selectedRow.id}};

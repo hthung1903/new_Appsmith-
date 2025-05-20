@@ -1,0 +1,2 @@
+DELETE FROM public."tailieu"
+  WHERE "id" = {{data_table.triggeredRow.id}};

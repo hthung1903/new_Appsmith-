@@ -1,0 +1,9 @@
+SELECT *
+FROM taikhoan
+WHERE domainid = ANY (
+    ARRAY[
+      {{ TableDomain.selectedRows.length > 0 
+          ? TableDomain.selectedRows.map(row => row.id).join(',') 
+          : 'NULL' 
+      }} 
+    ]::integer[]);

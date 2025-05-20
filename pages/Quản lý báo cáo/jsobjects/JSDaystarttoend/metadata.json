@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "6811d55e4101ca4f4d2f6d2e_852fac05-9a79-4685-9521-85b8f60310c0",
+  "id": "Quản lý báo cáo_JSDaystarttoend",
+  "unpublishedCollection": {
+    "name": "JSDaystarttoend",
+    "pageId": "Quản lý báo cáo",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+SELECT DISTINCT bc.*
+FROM baocao bc
+JOIN baocaololot bcll ON bc.id = bcll.baocaoid
+WHERE bcll.muctieuid = {{appsmith.store.selectedMucTieuId}};

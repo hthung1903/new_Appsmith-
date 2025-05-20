@@ -1,0 +1,13 @@
+SELECT 
+    TO_CHAR(bc.NgayBanHanh, 'MM/YYYY') AS ThoiGian,
+    COUNT(DISTINCT bcdq.MucTieuID) AS SoLuongMucTieuDoQuet
+FROM 
+    BaoCaoDoQuet bcdq
+JOIN 
+    BaoCao bc ON bcdq.BaoCaoID = bc.ID
+WHERE 
+    ngaybanhanh BETWEEN '{{ DatePickerStart3_1.selectedDate }}' AND '{{ DatePickerEnd3_1.selectedDate }}'
+GROUP BY 
+    TO_CHAR(bc.NgayBanHanh, 'MM/YYYY')
+ORDER BY 
+    ThoiGian;

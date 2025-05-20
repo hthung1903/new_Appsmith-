@@ -1,11 +1,20 @@
 {
-  "gitSyncId": "6811d55e4101ca4f4d2f6d2e_f5cad35c-83ea-4980-a49d-855a68e92e25",
+  "gitSyncId": "6811d55e4101ca4f4d2f6d2e_a8a5903e-06b5-4b74-9c28-dadaf19f5fe6",
   "id": "Public.hosotrinhsat_JSObject1",
   "unpublishedCollection": {
     "name": "JSObject1",
     "pageId": "Public.hosotrinhsat",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "variables": []
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
   }
 }

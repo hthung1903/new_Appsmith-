@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n  muctieu.*\nFROM public.kehoach_muctieu\nJOIN public.muctieu \n  ON kehoach_muctieu.muctieuid = muctieu.id\nWHERE kehoach_muctieu.kehoachid = {{ appsmith.URL.queryParams.planId }}\nORDER BY muctieu.id ASC\n",
+      "body": "SELECT \n  muctieu.*\nFROM public.kehoach_muctieu\nJOIN public.muctieu \n  ON kehoach_muctieu.muctieuid = muctieu.id\nWHERE kehoach_muctieu.kehoachid = {{appsmith.store.selectedKeHoachId }}\nORDER BY muctieu.id ASC\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

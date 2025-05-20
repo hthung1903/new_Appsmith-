@@ -1,0 +1,1 @@
+SELECT * FROM public."a_thietbimang" LIMIT 10;

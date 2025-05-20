@@ -1,0 +1,14 @@
+SELECT
+    TO_CHAR(b.NgayBanHanh, 'MM/YYYY') AS x,
+    COUNT(*) AS y
+FROM
+    BaoCao b
+JOIN
+    BaoCaoMaDoc bmd ON b.ID = bmd.BaoCaoID
+WHERE
+    b.LoaiBaoCao = 'Báo cáo Săn tìm mối nguy cơ' -- Hoặc loại báo cáo phù hợp với mã độc
+    AND b.NgayBanHanh BETWEEN '{{ DatePickerStart5_1.selectedDate }}' AND '{{ DatePickerEnd5_1.selectedDate }}'
+GROUP BY
+    TO_CHAR(b.NgayBanHanh, 'MM/YYYY')
+ORDER BY
+    MIN(b.NgayBanHanh);

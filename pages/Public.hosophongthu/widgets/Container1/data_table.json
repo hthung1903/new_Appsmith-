@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 66,
+  "bottomRow": 63,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "button": {
@@ -128,6 +128,9 @@
     },
     {
       "key": "tableData"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "dynamicTriggerPathList": [
@@ -165,7 +168,7 @@
   "leftColumn": 0,
   "multiRowSelection": false,
   "onPageChange": "{{SelectQuery.run()}}",
-  "onRowSelected": "{{appsmith.geolocation.getCurrentPosition((location) => {\n      // add code here\n    });}}",
+  "onRowSelected": "{{ \nshowModal(Modal1.name).then(async () => {\n\t// Chờ update_form.formData có dữ liệu\n\tawait new Promise((resolve) => {\n\t\tconst interval = setInterval(() => {\n\t\t\tif (update_form.formData && Object.keys(update_form.formData).length > 0) {\n\t\t\t\tclearInterval(interval);\n\t\t\t\tresolve();\n\t\t\t}\n\t\t}, 100); // kiểm tra mỗi 100ms\n\t});\n\n\t// Sau khi form đã load dữ liệu → chạy tiếp các hàm\n\tawait JSShowFile.ShowSDTC();\n\tawait JSShowFile.ShowSDLG();\n\tawait JSShowFile.ShowSTR();\n\tawait JSShowFile.ShowDDF();\n\t// Các hành động khác...\n})\n}}\n",
   "onSearchTextChanged": "{{SelectQuery.run()}}",
   "onSort": "{{SelectQuery.run()}}",
   "parentColumnSpace": 16.3125,

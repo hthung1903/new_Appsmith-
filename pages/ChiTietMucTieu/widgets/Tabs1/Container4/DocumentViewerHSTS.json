@@ -1,0 +1,33 @@
+{
+  "animateLoading": true,
+  "bottomRow": 69,
+  "docUrl": "{{JSShowFile.ShowDDFHSTS.data}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "docUrl"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isCanvas": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "fpm2hxu3cl",
+  "leftColumn": 0,
+  "mobileBottomRow": 41,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 27,
+  "mobileTopRow": 1,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 7.48974609375,
+  "parentId": "v1hoipemdl",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "topRow": 0,
+  "type": "DOCUMENT_VIEWER_WIDGET",
+  "version": 1,
+  "widgetId": "v32qu77wjn",
+  "widgetName": "DocumentViewerHSTS"
+}

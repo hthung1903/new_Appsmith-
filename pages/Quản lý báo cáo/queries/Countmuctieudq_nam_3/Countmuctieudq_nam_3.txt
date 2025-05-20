@@ -1,0 +1,13 @@
+SELECT
+    EXTRACT(YEAR FROM bc.NgayBanHanh) AS Nam,
+    COUNT(DISTINCT bcdq.MucTieuID) AS TongSoMucTieuDoQuet
+FROM
+    BaoCaoDoQuet bcdq
+JOIN
+    BaoCao bc ON bcdq.BaoCaoID = bc.ID
+WHERE
+   ngaybanhanh BETWEEN '{{ DatePickerStart3_1.selectedDate }}' AND '{{ DatePickerEnd3_1.selectedDate }}'
+GROUP BY
+    EXTRACT(YEAR FROM bc.NgayBanHanh)
+ORDER BY
+    Nam;

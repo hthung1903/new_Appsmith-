@@ -1,0 +1,12 @@
+SELECT
+    EXTRACT(YEAR FROM NgayBanHanh) AS Nam,
+    COUNT(*) AS SoLuongBaoCao
+FROM
+    BaoCao
+WHERE 
+    NgayBanHanh BETWEEN '{{ DatePickerStart4_1.selectedDate }}' AND '{{ DatePickerEnd4_1.selectedDate }}'
+    AND LoaiBaoCao = 'Báo cáo lộ lọt tài khoản'
+GROUP BY
+    EXTRACT(YEAR FROM NgayBanHanh)
+ORDER BY
+    Nam;

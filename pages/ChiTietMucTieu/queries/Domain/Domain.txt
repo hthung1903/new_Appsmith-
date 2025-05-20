@@ -1,0 +1,3 @@
+SELECT * 
+FROM domain dm
+WHERE dm.muctieuid = {{appsmith.store.selectedMucTieuId}}

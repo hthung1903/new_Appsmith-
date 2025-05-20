@@ -22,6 +22,11 @@
       "name": "csdltc",
       "pluginId": "postgres-plugin"
     },
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "executeOnLoad": false,
     "name": "DeleteQuery",
     "pageId": "Public.hosotrinhsat",

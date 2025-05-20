@@ -1,18 +1,20 @@
 INSERT INTO public."hosophongthu" (
-	"tenhoso",
-	"ngaybanhanh",
-	"ngaysuadoi",
-	"muctieuid",
-	"sodotuyencap",
-	"sodologic",
-	"soturack",
-	"duongdanfile")
+    "tenhoso",
+    "ngaybanhanh"
+    {{ insert_form.formData.ngaysuadoi ? ', "ngaysuadoi"' : '' }},
+    "muctieuid",
+    "sodotuyencap",
+    "sodologic",
+    "soturack",
+    "duongdanfile"
+)
 VALUES (
-	'{{insert_form.formData.tenhoso}}',
-	'{{insert_form.formData.ngaybanhanh}}',
-	'{{insert_form.formData.ngaysuadoi}}',
-	'{{insert_form.formData.muctieuid}}',
-	'{{insert_form.formData.sodotuyencap}}',
-	'{{insert_form.formData.sodologic}}',
-	'{{insert_form.formData.soturack}}',
-	'{{insert_form.formData.duongdanfile}}');
+    '{{insert_form.formData.tenhoso}}',
+    '{{insert_form.formData.ngaybanhanh}}'
+    {{ insert_form.formData.ngaysuadoi ? ", '" + insert_form.formData.ngaysuadoi + "'" : '' }},
+    '{{insert_form.formData.muctieuid}}',
+    '{{insert_form.formData.sodotuyencap}}',
+    '{{insert_form.formData.sodologic}}',
+    '{{insert_form.formData.soturack}}',
+    '{{insert_form.formData.duongdanfile}}'
+);

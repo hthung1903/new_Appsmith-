@@ -3,5 +3,5 @@ SELECT
 FROM public.kehoach_muctieu
 JOIN public.muctieu 
   ON kehoach_muctieu.muctieuid = muctieu.id
-WHERE kehoach_muctieu.kehoachid = {{ appsmith.URL.queryParams.planId }}
+WHERE kehoach_muctieu.kehoachid = {{appsmith.store.selectedKeHoachId }}
 ORDER BY muctieu.id ASC

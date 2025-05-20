@@ -1,0 +1,15 @@
+SELECT
+    EXTRACT(YEAR FROM NgayBanHanh) AS Nam,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 1 THEN 1 END) AS Quy1,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 2 THEN 1 END) AS Quy2,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 3 THEN 1 END) AS Quy3,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 4 THEN 1 END) AS Quy4
+FROM
+    BaoCao
+WHERE
+    LoaiBaoCao = 'Báo cáo Trinh sát chuyên sâu'
+    AND ngaybanhanh BETWEEN '{{ DatePickerStart2_1.selectedDate }}' AND '{{ DatePickerEnd2_1.selectedDate }}'
+GROUP BY
+    EXTRACT(YEAR FROM NgayBanHanh)
+ORDER BY
+    Nam;

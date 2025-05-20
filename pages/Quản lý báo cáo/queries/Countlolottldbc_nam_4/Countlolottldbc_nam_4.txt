@@ -1,0 +1,14 @@
+SELECT
+    EXTRACT(YEAR FROM b.NgayBanHanh) AS Nam,
+    COUNT(DISTINCT bll.MucTieuID) AS SoMucTieuLoLot
+FROM
+    BaoCao b
+JOIN
+    BaoCaoLoLot bll ON b.ID = bll.BaoCaoID
+WHERE
+    b.LoaiBaoCao = 'Báo cáo lộ lọt tài khoản'
+    AND b.NgayBanHanh BETWEEN '{{DatePickerStart4_1.selectedDate}}' AND '{{DatePickerEnd4_1.selectedDate}}'
+GROUP BY
+    EXTRACT(YEAR FROM b.NgayBanHanh)
+ORDER BY
+    Nam;

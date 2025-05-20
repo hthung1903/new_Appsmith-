@@ -1,0 +1,14 @@
+SELECT
+    EXTRACT(YEAR FROM NgayBanHanh) AS Nam,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 1 THEN 1 END) AS Q1,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 2 THEN 1 END) AS Q2,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 3 THEN 1 END) AS Q3,
+    COUNT(CASE WHEN EXTRACT(QUARTER FROM NgayBanHanh) = 4 THEN 1 END) AS Q4
+FROM
+    BaoCao
+WHERE
+    ngaybanhanh BETWEEN '{{ DatePickerStart1_1.selectedDate }}' AND '{{ DatePickerEnd1_1.selectedDate }}'
+GROUP BY
+    EXTRACT(YEAR FROM NgayBanHanh)
+ORDER BY
+    Nam;

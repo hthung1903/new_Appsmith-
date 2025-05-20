@@ -122,9 +122,6 @@
       "key": "schema.__root_schema__.children.loaikehoach.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.tenkehoach.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.tenkehoach.borderRadius"
     },
     {
@@ -135,9 +132,6 @@
     },
     {
       "key": "schema.__root_schema__.children.capbanhanh.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.ngaybanhanh.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.ngaybanhanh.borderRadius"
@@ -156,9 +150,6 @@
     },
     {
       "key": "schema.__root_schema__.children.kehoachid.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.mota.defaultValue"
     },
     {
       "key": "schema.__root_schema__.children.mota.borderRadius"
@@ -183,6 +174,9 @@
     },
     {
       "key": "schema.__root_schema__.children.ngaybanhanh.defaultValue"
+    },
+    {
+      "key": "onSubmit"
     }
   ],
   "dynamicTriggerPathList": [
@@ -201,7 +195,7 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{InsertQuery.run(() => {\n  SelectQuery.run().then(() => closeModal('Insert_Modal'));\n  resetWidget(\"FilePicker1\", true);\n  resetWidget(\"insert_form\", true);\n}, error => {\n  showAlert(`Error while inserting resource!\\n ${error}`, 'error');\n});}}",
+  "onSubmit": "{{InsertQuery.run(() => {\n  SelectQuery.run().then(() => closeModal('Insert_Modal'));\n  resetWidget(\"FilePicker1\", true);\n  resetWidget(\"insert_form\", true);\n  storeValue(\"uploadedFilePath\", \"\");\n}, error => {\n  showAlert(`Error while inserting resource!\\n ${error}`, 'error');\n});}}",
   "originalBottomRow": 73,
   "originalTopRow": 6,
   "parentColumnSpace": 8.125,
@@ -254,12 +248,12 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => ( ApiUpload.data?.saved_path || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "{{((sourceData, formData, fieldState) => ( appsmith.store.uploadedFilePath || '' ))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "duongdanfile",
           "isCustomField": false,
-          "isDisabled": false,
+          "isDisabled": true,
           "isRequired": false,
           "isSpellCheck": false,
           "isVisible": true,
@@ -320,7 +314,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.mota))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "mota",
@@ -345,7 +339,7 @@
           "convertToISO": false,
           "dataType": "string",
           "dateFormat": "YYYY-MM-DD",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (moment(sourceData.ngaybanhanh, \"YYYY-MM-DD\").format(\"YYYY-MM-DDTHH:mm:ss.sssZ\")))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Datepicker",
           "identifier": "ngaybanhanh",
           "isCustomField": false,
@@ -391,7 +385,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.tenkehoach))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "tenkehoach",

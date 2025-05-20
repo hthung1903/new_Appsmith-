@@ -1,5 +1,4 @@
 {
-  "file": "{{ FilePicker1.files[0] }}", // Accessing the file data
-  "key1": "value1",
-  "key2": "value2"
+  "filename": "{{FilePicker1.files[0].name}}",
+  "filedata": "{{FilePicker1.files[0].data.split(',')[1]}}"
 }

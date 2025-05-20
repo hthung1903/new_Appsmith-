@@ -1,0 +1,4 @@
+SELECT DISTINCT tk.*
+FROM taikhoan tk
+JOIN domain dm ON dm.id = tk.domainid
+WHERE dm.muctieuid = {{ appsmith.store.selectedMucTieuId }};

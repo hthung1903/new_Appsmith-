@@ -1,0 +1,9 @@
+SELECT mt.kinhdo, mt.vido, mt.tenmuctieu
+FROM public.muctieu mt
+WHERE mt.id = ANY (
+    ARRAY[
+      {{ TableMucTieuHoSo.selectedRows.length > 0 
+          ? TableMucTieuHoSo.selectedRows.map(row => row.id).join(',') 
+          : 'NULL' 
+      }} 
+    ]::integer[]);
