@@ -1,0 +1,3 @@
+SELECT kinhdo, vido, tenmuctieu 
+FROM muctieu 
+WHERE id = ANY(ARRAY[{{appsmith.store.selectedMucTieuHSPT}}]::integer[])

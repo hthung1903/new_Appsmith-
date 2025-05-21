@@ -89,9 +89,6 @@
       "key": "schema.__root_schema__.defaultValue"
     },
     {
-      "key": "sourceData"
-    },
-    {
       "key": "schema.__root_schema__.borderRadius"
     },
     {
@@ -216,6 +213,9 @@
     },
     {
       "key": "schema.__root_schema__.children.layquausbat.defaultValue"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -234,7 +234,7 @@
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
-  "onSubmit": "{{InsertQuery_1.run(\n\t() => SelectQuery_1.run()\n\t\t\t\t\t.then(() => closeModal('Insert_Modal')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
+  "onSubmit": "{{InsertQuery_3.run()}}",
   "parentColumnSpace": 8.125,
   "parentId": "hibeiejfl6",
   "parentRowSpace": 10,
@@ -358,7 +358,7 @@
           "isDisabled": false,
           "isRequired": false,
           "isSpellCheck": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Id",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "id",
@@ -521,7 +521,7 @@
   },
   "scrollContents": true,
   "showReset": true,
-  "sourceData": "{{data_madoc.selectedRow}}",
+  "sourceData": "",
   "submitButtonLabel": "Submit",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",

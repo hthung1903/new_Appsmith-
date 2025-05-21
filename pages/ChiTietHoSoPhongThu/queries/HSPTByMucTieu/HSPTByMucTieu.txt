@@ -1,0 +1,2 @@
+SELECT * FROM public.hosophongthu
+WHERE muctieuid = ANY(ARRAY[{{appsmith.store.selectedMucTieuHSPT}}]::integer[])

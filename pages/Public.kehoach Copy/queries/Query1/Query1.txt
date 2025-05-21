@@ -1,0 +1,13 @@
+SELECT 
+    k.sokehoach,
+    k.tenkehoach,
+    m.danhmuc AS loaimuctieu,
+    COUNT(m.id) AS so_luong_muctieu
+FROM 
+    kehoach k
+JOIN 
+    muctieu m ON k.id = m.kehoachid
+GROUP BY 
+    k.sokehoach, k.tenkehoach, m.danhmuc
+ORDER BY 
+    k.sokehoach, m.danhmuc;

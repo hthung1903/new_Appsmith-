@@ -1,0 +1,4 @@
+SELECT d.Domain, COUNT(t.ID) AS SoLuong
+FROM Domain d
+LEFT JOIN TaiKhoan t ON d.ID = t.DomainID
+GROUP BY d.Domain;

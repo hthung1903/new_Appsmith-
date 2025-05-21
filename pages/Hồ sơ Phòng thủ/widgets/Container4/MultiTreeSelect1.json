@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowClear": true,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "defaultOptionValue": "[]",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "options"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "expandAll": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "pxg5c5r0yu",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Mục tiêu",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 44,
+  "mobileTopRow": 3,
+  "mode": "SHOW_ALL",
+  "needsErrorInfo": false,
+  "onOptionChange": "{{MuctieuForMap.run();\nHSPTByMucTieu.run()}}",
+  "options": "{{\n  (() => {\n    const data = AllMucTieu.data;\n    const nodeMap = {};\n    const tree = [];\n\n    // Tạo nodeMap\n    data.forEach(item => {\n      nodeMap[item.id] = {\n        label: item.tenmuctieu,\n        value: item.id,\n        children: []\n      };\n    });\n\n    // Gắn con vào cha nếu có\n    data.forEach(item => {\n      if (item.muctieuid !== null) {\n        const parent = nodeMap[item.muctieuid];\n        if (parent) {\n          parent.children.push(nodeMap[item.id]);\n        } else {\n          // Nếu không tìm thấy cha, thì vẫn cho vào tree như node độc lập\n          tree.push(nodeMap[item.id]);\n        }\n      } else {\n        // Là node cha (gốc)\n        tree.push(nodeMap[item.id]);\n      }\n    });\n\n    return tree;\n  })()\n}}\n",
+  "parentColumnSpace": 3.79638671875,
+  "parentId": "hmwok3ziaf",
+  "parentRowSpace": 10,
+  "placeholderText": "Chọn mục tiêu",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "topRow": 3,
+  "type": "MULTI_SELECT_TREE_WIDGET",
+  "version": 1,
+  "widgetId": "3w2u5zt3xr",
+  "widgetName": "MultiTreeSelect1"
+}

@@ -1,0 +1,8 @@
+SELECT 
+    vido , 
+    kinhdo , 
+    tenmuctieu 
+FROM public."muctieu"
+WHERE 
+    {{ MultiTreeSelect1.selectedOptionValues.length > 0 ? '"id" = ANY(ARRAY[' + MultiTreeSelect1.selectedOptionValues.join(',') + '])' : 'TRUE' }}
+ORDER BY "id" ASC

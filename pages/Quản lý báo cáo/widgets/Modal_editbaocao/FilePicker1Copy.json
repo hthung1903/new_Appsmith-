@@ -44,7 +44,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 44,
   "needsErrorInfo": false,
-  "onFilesSelected": "{{JSObject1.uploadFile();}}",
+  "onFilesSelected": "{{JSObject1.uploadFile();\nresetWidget(\"\",true)}}",
   "originalBottomRow": 9,
   "originalTopRow": 5,
   "parentColumnSpace": 5.84375,

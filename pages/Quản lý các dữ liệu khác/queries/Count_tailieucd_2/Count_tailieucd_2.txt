@@ -1,0 +1,3 @@
+SELECT CapDo, COUNT(*) AS SoLuong
+FROM TaiLieu
+GROUP BY CapDo;

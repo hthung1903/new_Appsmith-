@@ -1,0 +1,3 @@
+SELECT TrangThai, COUNT(*) AS SoLuong
+FROM TaiKhoan
+GROUP BY TrangThai;

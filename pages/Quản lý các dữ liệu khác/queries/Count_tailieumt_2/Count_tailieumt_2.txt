@@ -1,0 +1,4 @@
+SELECT m.QuocGia, COUNT(t.ID) AS SoLuong
+FROM MucTieu m
+LEFT JOIN TaiLieu t ON m.ID = t.MucTieuID
+GROUP BY m.QuocGia;

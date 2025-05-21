@@ -1,0 +1,19 @@
+WITH TaiLieuTong AS (
+    SELECT COUNT(*) AS TongSo FROM TaiLieu
+),
+TaiLieuDaBaoCao AS (
+    SELECT COUNT(DISTINCT t.ID) AS DaBaoCao
+    FROM TaiLieu t
+    LEFT JOIN BaoCaoTrinhSat bct ON t.ID = bct.TaiLieuID
+    LEFT JOIN BaoCaoDoQuet bcdq ON t.ID = bcdq.TaiLieuID
+    LEFT JOIN BaoCaoLoLot bcll ON t.ID = bcll.TaiLieuID
+    LEFT JOIN BaoCaoMaDoc bcmd ON t.ID = bcmd.TaiLieuID
+    WHERE bct.TaiLieuID IS NOT NULL 
+       OR bcdq.TaiLieuID IS NOT NULL 
+       OR bcll.TaiLieuID IS NOT NULL 
+       OR bcmd.TaiLieuID IS NOT NULL
+)
+SELECT 
+    (SELECT TongSo FROM TaiLieuTong) AS TongTaiLieu,
+    (SELECT DaBaoCao FROM TaiLieuDaBaoCao) AS DaLamBaoCao,
+    (SELECT TongSo - DaBaoCao FROM TaiLieuTong, TaiLieuDaBaoCao) AS ChuaLamBaoCao;

@@ -1,0 +1,5 @@
+SELECT mt.QuocGia, COUNT(d.ID) as SoLuongDomain
+FROM MucTieu mt
+LEFT JOIN Domain d ON mt.ID = d.MucTieuID
+GROUP BY mt.QuocGia
+ORDER BY SoLuongDomain DESC;

@@ -1,0 +1,11 @@
+SELECT 
+    k."loaikehoach" AS x,
+    COUNT(b."id") AS y
+FROM 
+    "baocao" b
+JOIN 
+    "kehoach" k ON b."kehoachid" = k."id"
+GROUP BY 
+    k."loaikehoach"
+ORDER BY 
+    y DESC;

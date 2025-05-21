@@ -1,0 +1,3 @@
+SELECT DISTINCT(mt.id), mt.tenmuctieu, mt.kinhdo, mt.vido, mt.muctieuid
+FROM muctieu mt
+JOIN hosophongthu hspt ON mt.id = hspt.muctieuid

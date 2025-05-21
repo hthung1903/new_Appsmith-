@@ -1,0 +1,3 @@
+SELECT * 
+FROM e_thietbimang 
+WHERE hosomangid = {{Table3.selectedRow.id}}

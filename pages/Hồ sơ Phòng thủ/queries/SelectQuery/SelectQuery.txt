@@ -1,0 +1,3 @@
+SELECT * FROM public."hosophongthu"
+WHERE "tenhoso" ilike '%{{data_table.searchText || ""}}%'
+ORDER BY "{{data_table.sortOrder.column || 'id'}}" {{data_table.sortOrder.order || 'ASC'}}

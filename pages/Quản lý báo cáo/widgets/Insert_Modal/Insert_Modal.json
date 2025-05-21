@@ -7,7 +7,7 @@
   "children": [
     {
       "borderRadius": "0px",
-      "bottomRow": 910,
+      "bottomRow": 880,
       "boxShadow": "none",
       "canExtend": true,
       "detachFromLayout": true,

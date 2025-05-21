@@ -1,0 +1,3 @@
+SELECT public.kehoach.capbanhanh AS x, COUNT(*) AS y
+FROM public.kehoach
+GROUP BY public.kehoach.capbanhanh

@@ -7,7 +7,7 @@
     "navigationSetting": {
       "colorStyle": "light",
       "logoAssetId": "",
-      "logoConfiguration": "logoAndApplicationTitle",
+      "logoConfiguration": "logoOnly",
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",
@@ -30,7 +30,7 @@
       "isDefault": true
     },
     {
-      "id": "Public.kehoach",
+      "id": "Kế hoạch",
       "isDefault": false
     },
     {
@@ -38,7 +38,7 @@
       "isDefault": false
     },
     {
-      "id": "Public.muctieu",
+      "id": "Mục tiêu",
       "isDefault": false
     },
     {
@@ -46,11 +46,11 @@
       "isDefault": false
     },
     {
-      "id": "Public.hosotrinhsat",
+      "id": "Hồ sơ Trinh sát",
       "isDefault": false
     },
     {
-      "id": "Public.hosophongthu",
+      "id": "Hồ sơ Phòng thủ",
       "isDefault": false
     },
     {
@@ -62,15 +62,27 @@
       "isDefault": false
     },
     {
-      "id": "Public.taikhoan",
+      "id": "Tài khoản",
       "isDefault": false
     },
     {
-      "id": "Public.tailieu",
+      "id": "Tài liệu",
       "isDefault": false
     },
     {
-      "id": "Public.madoc",
+      "id": "Mã độc",
+      "isDefault": false
+    },
+    {
+      "id": "Public.baocao",
+      "isDefault": false
+    },
+    {
+      "id": "Public.kehoach Copy",
+      "isDefault": false
+    },
+    {
+      "id": "ChiTietHoSoPhongThu",
       "isDefault": false
     }
   ],
@@ -81,7 +93,7 @@
     "navigationSetting": {
       "colorStyle": "light",
       "logoAssetId": "",
-      "logoConfiguration": "logoAndApplicationTitle",
+      "logoConfiguration": "logoOnly",
       "navStyle": "stacked",
       "orientation": "top",
       "position": "static",

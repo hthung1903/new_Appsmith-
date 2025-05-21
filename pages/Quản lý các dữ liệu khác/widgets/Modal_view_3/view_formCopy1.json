@@ -219,6 +219,9 @@
     },
     {
       "key": "schema.__root_schema__.children.layquausbat.defaultValue"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -526,7 +529,7 @@
   },
   "scrollContents": true,
   "showReset": false,
-  "sourceData": "{{data_madoc.selectedRow}}",
+  "sourceData": "{{data_madoc.triggeredRow}}",
   "submitButtonLabel": "Close",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",

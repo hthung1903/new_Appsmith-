@@ -1,0 +1,8 @@
+SELECT 
+  a.tenThuocTinh ,
+  a.loaiDuLieu ,
+  v.giaTri,
+	a.mota
+FROM v_thietbimang v
+JOIN a_thietbimang a ON v.a_thietbimangid = a.id
+WHERE v.e_thietbimangid = {{Table1.selectedRow.id}};

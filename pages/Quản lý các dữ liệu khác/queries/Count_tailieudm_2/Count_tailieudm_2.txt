@@ -1,0 +1,8 @@
+SELECT 
+    m.QuocGia,
+    COUNT(CASE WHEN t.DoMat = 'Tối mật' THEN t.ID END) AS "Tối mật",
+    COUNT(CASE WHEN t.DoMat = 'Mật' THEN t.ID END) AS "Mật",
+    COUNT(CASE WHEN t.DoMat = 'Hạn Chế' THEN t.ID END) AS "Hạn Chế"
+FROM MucTieu m
+LEFT JOIN TaiLieu t ON m.ID = t.MucTieuID
+GROUP BY m.QuocGia;

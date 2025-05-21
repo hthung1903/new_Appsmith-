@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 83,
+  "bottomRow": 85,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -215,8 +215,8 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 83,
-  "originalTopRow": 5,
+  "originalBottomRow": 85,
+  "originalTopRow": 4,
   "parentColumnSpace": 16.3125,
   "parentId": "surk2nzd4j",
   "parentRowSpace": 10,
@@ -444,8 +444,8 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Update Row id: {{data_table.selectedRow.id}}",
-  "topRow": 5,
+  "title": "Thông tin mục tiêu: {{data_table.selectedRow.tenmuctieu}}",
+  "topRow": 4,
   "type": "JSON_FORM_WIDGET",
   "version": 1,
   "widgetId": "9box0ouvkl",

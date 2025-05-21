@@ -1,0 +1,22 @@
+INSERT INTO public."baocao" (
+	"sobaocao",
+	"ngaybanhanh",
+	"ngaysuadoi",
+	"loaibaocao",
+	"tenbaocao",
+	"kehoachid",
+	"mota",
+	"trangthai",
+	"duongdan",
+	"capbaocao")
+VALUES (
+	'{{insert_form.formData.sobaocao}}',
+	'{{insert_form.formData.ngaybanhanh}}',
+	'{{insert_form.formData.ngaysuadoi}}',
+	'{{insert_form.formData.loaibaocao}}',
+	'{{insert_form.formData.tenbaocao}}',
+	'{{insert_form.formData.kehoachid}}',
+	'{{insert_form.formData.mota}}',
+	'{{insert_form.formData.trangthai}}',
+	'{{insert_form.formData.duongdan}}',
+	'{{insert_form.formData.capbaocao}}');

@@ -1,0 +1,6 @@
+SELECT mt.QuocGia, COUNT(tk.ID) as SoLuongTaiKhoan
+FROM MucTieu mt
+LEFT JOIN Domain d ON mt.ID = d.MucTieuID
+LEFT JOIN TaiKhoan tk ON d.ID = tk.DomainID
+GROUP BY mt.QuocGia
+ORDER BY SoLuongTaiKhoan DESC;

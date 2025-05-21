@@ -1,0 +1,12 @@
+UPDATE public."baocao" SET
+		"sobaocao" = '{{update_form.fieldState.sobaocao.isVisible ? update_form.formData.sobaocao : update_form.sourceData.sobaocao}}',
+		"ngaybanhanh" = '{{update_form.fieldState.ngaybanhanh.isVisible ? update_form.formData.ngaybanhanh : update_form.sourceData.ngaybanhanh}}',
+    "ngaysuadoi" = '{{update_form.fieldState.ngaysuadoi.isVisible ? update_form.formData.ngaysuadoi : update_form.sourceData.ngaysuadoi}}',
+		"loaibaocao" = '{{update_form.fieldState.loaibaocao.isVisible ? update_form.formData.loaibaocao : update_form.sourceData.loaibaocao}}',
+		"tenbaocao" = '{{update_form.fieldState.tenbaocao.isVisible ? update_form.formData.tenbaocao : update_form.sourceData.tenbaocao}}',
+		"kehoachid" = '{{update_form.fieldState.kehoachid.isVisible ? update_form.formData.kehoachid : update_form.sourceData.kehoachid}}',
+		"mota" = '{{update_form.fieldState.mota.isVisible ? update_form.formData.mota : update_form.sourceData.mota}}',
+		"trangthai" = '{{update_form.fieldState.trangthai.isVisible ? update_form.formData.trangthai : update_form.sourceData.trangthai}}',
+		"duongdan" = '{{update_form.fieldState.duongdan.isVisible ? update_form.formData.duongdan : update_form.sourceData.duongdan}}',
+		"capbaocao" = '{{update_form.fieldState.capbaocao.isVisible ? update_form.formData.capbaocao : update_form.sourceData.capbaocao}}'
+WHERE "id" = {{data_table.selectedRow.id}};

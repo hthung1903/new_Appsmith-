@@ -1,0 +1,16 @@
+INSERT INTO public."kehoach" (
+	"sokehoach",
+	"loaikehoach",
+	"tenkehoach",
+	"capbanhanh",
+	"ngaybanhanh",
+	"duongdanfile",
+	"mota")
+VALUES (
+	'{{insert_form.formData.sokehoach}}',
+	'{{insert_form.formData.loaikehoach}}',
+	'{{insert_form.formData.tenkehoach}}',
+	'{{insert_form.formData.capbanhanh}}',
+	'{{insert_form.formData.ngaybanhanh}}',
+	'{{insert_form.formData.duongdanfile}}',
+	'{{insert_form.formData.mota}}');

@@ -239,6 +239,9 @@
     },
     {
       "key": "schema.__root_schema__.children.ngaytaixuong.defaultValue"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicTriggerPathList": [
@@ -578,7 +581,7 @@
   "scrollContents": true,
   "shouldScrollContents": true,
   "showReset": true,
-  "sourceData": "{{data_tailieu.selectedRow}}",
+  "sourceData": "{{data_tailieu.triggeredRow}}",
   "submitButtonLabel": "Update",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",

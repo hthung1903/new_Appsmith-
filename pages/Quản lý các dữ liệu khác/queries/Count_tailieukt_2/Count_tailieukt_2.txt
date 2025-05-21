@@ -1,0 +1,4 @@
+SELECT m.QuocGia, COALESCE(SUM(t.KichThuoc), 0) AS TongKichThuoc
+FROM MucTieu m
+LEFT JOIN TaiLieu t ON m.ID = t.MucTieuID
+GROUP BY m.QuocGia;
